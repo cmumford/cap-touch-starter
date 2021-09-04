@@ -1,0 +1,14 @@
+*.swp
+.vscode/
+.DS_Store
+workspace.code-workspace
+
+# KiCad files to ignore
+*-bak
+*-cache.lib
+*.bck
+*.net
+*.sch-bak
+*.swp
+_autosave-*
+fp-info-cache
