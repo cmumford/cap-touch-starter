@@ -24,4 +24,17 @@ F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d
 	1    2750 3150
 	1    0    0    -1  
 $EndComp
+$Comp
+L 62684-50110:62684-50110 J?
+U 1 1 6133B4EE
+P 6400 3450
+F 0 "J?" H 6730 3446 50  0000 L CNN
+F 1 "62684-50110" H 6730 3355 50  0000 L CNN
+F 2 "TE_5-1734592-0" H 6800 3600 50  0001 L BNN
+F 3 "" H 6400 3450 50  0001 L BNN
+F 4 "Compliant" H 6900 3450 50  0001 L BNN "EU_RoHS_Compliance"
+F 5 "62684-50110" H 6850 3750 50  0001 L BNN "Comment"
+	1    6400 3450
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
