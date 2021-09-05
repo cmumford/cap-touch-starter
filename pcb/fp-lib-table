@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name 62684-50110)(type KiCad)(uri ${KIPRJMOD}/library/62684-50110/footprints.pretty)(options "")(descr ""))
+  (lib (name ESP32-WROOM-32E)(type KiCad)(uri ${KIPRJMOD}/library/ESP32-WROOM-32E/footprints.pretty)(options "")(descr ""))
 )
