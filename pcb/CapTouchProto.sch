@@ -320,10 +320,10 @@ F 3 "~" H 7850 1750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7850 3500 7850 1900
+	7850 3500 7850 2150
 Connection ~ 7850 3500
 Wire Wire Line
-	8000 3400 8000 1900
+	8000 3400 8000 2250
 Connection ~ 8000 3400
 Wire Wire Line
 	6350 1500 7850 1500
@@ -851,7 +851,7 @@ Wire Wire Line
 Wire Wire Line
 	4000 5050 4100 5050
 Wire Wire Line
-	7050 5450 7050 5700
+	7050 5450 7050 5600
 Wire Wire Line
 	5750 6300 6300 6300
 Wire Wire Line
@@ -1313,4 +1313,82 @@ F 3 "" H 9000 750 50  0001 C CNN
 	1    9000 750 
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:TestPoint TP2
+U 1 1 6137A585
+P 8000 2250
+F 0 "TP2" V 7954 2438 50  0000 L CNN
+F 1 "SDA" V 8045 2438 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.5mm" H 8200 2250 50  0001 C CNN
+F 3 "~" H 8200 2250 50  0001 C CNN
+	1    8000 2250
+	0    1    1    0   
+$EndComp
+Connection ~ 8000 2250
+Wire Wire Line
+	8000 2250 8000 1900
+$Comp
+L Connector:TestPoint TP1
+U 1 1 6137B7F5
+P 7850 2150
+F 0 "TP1" V 7850 2400 50  0000 C CNN
+F 1 "SCL" V 7750 2300 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.5mm" H 8050 2150 50  0001 C CNN
+F 3 "~" H 8050 2150 50  0001 C CNN
+	1    7850 2150
+	0    -1   -1   0   
+$EndComp
+Connection ~ 7850 2150
+Wire Wire Line
+	7850 2150 7850 1900
+$Comp
+L Connector:TestPoint TP3
+U 1 1 61384E5A
+P 2350 950
+F 0 "TP3" V 2304 1138 50  0000 L CNN
+F 1 "5V" V 2395 1138 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.5mm" H 2550 950 50  0001 C CNN
+F 3 "~" H 2550 950 50  0001 C CNN
+	1    2350 950 
+	0    1    1    0   
+$EndComp
+Connection ~ 2350 950 
+$Comp
+L Connector:TestPoint TP4
+U 1 1 613858D9
+P 7050 5600
+F 0 "TP4" V 7004 5788 50  0000 L CNN
+F 1 "3V3" V 7095 5788 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.5mm" H 7250 5600 50  0001 C CNN
+F 3 "~" H 7250 5600 50  0001 C CNN
+	1    7050 5600
+	0    1    1    0   
+$EndComp
+Connection ~ 7050 5600
+Wire Wire Line
+	7050 5600 7050 5700
+$Comp
+L Connector:Conn_01x01_Male J3
+U 1 1 613DC3F5
+P 4200 2550
+F 0 "J3" H 4308 2731 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 4308 2640 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 4200 2550 50  0001 C CNN
+F 3 "~" H 4200 2550 50  0001 C CNN
+	1    4200 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 613DCA2E
+P 4400 2700
+F 0 "#PWR0105" H 4400 2450 50  0001 C CNN
+F 1 "GND" H 4405 2527 50  0000 C CNN
+F 2 "" H 4400 2700 50  0001 C CNN
+F 3 "" H 4400 2700 50  0001 C CNN
+	1    4400 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 2550 4400 2700
 $EndSCHEMATC
