@@ -480,7 +480,7 @@ U 1 1 6139D04F
 P 1150 1950
 F 0 "J1" H 1100 2550 50  0000 C CNN
 F 1 "USB_C_Receptacle" H 1150 3150 50  0000 C CNN
-F 2 "" H 1300 1950 50  0001 C CNN
+F 2 "Connector_USB:USB_C_Receptacle_Amphenol_12401548E4-2A" H 1300 1950 50  0001 C CNN
 F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1300 1950 50  0001 C CNN
 	1    1150 1950
 	1    0    0    -1  
