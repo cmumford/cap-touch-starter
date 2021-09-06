@@ -66,17 +66,6 @@ Wire Wire Line
 Wire Wire Line
 	9350 5200 9350 5700
 Connection ~ 9350 5700
-$Comp
-L power:+5V #PWR023
-U 1 1 6133FE2C
-P 9000 750
-F 0 "#PWR023" H 9000 600 50  0001 C CNN
-F 1 "+5V" H 9015 923 50  0000 C CNN
-F 2 "" H 9000 750 50  0001 C CNN
-F 3 "" H 9000 750 50  0001 C CNN
-	1    9000 750 
-	1    0    0    -1  
-$EndComp
 NoConn ~ 9500 6000
 NoConn ~ 9500 6100
 Wire Wire Line
@@ -172,7 +161,7 @@ Wire Wire Line
 	8900 5100 8900 5000
 Connection ~ 8900 5000
 Wire Wire Line
-	9000 750  9000 1100
+	9000 750  9000 1000
 Wire Wire Line
 	9500 4100 9400 4100
 Wire Wire Line
@@ -1306,6 +1295,22 @@ F 1 "GND" H 2755 1427 50  0000 C CNN
 F 2 "" H 2750 1600 50  0001 C CNN
 F 3 "" H 2750 1600 50  0001 C CNN
 	1    2750 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 1000 9000 1000
+Connection ~ 9000 1000
+Wire Wire Line
+	9000 1000 9000 1100
+$Comp
+L power:VBUS #PWR0104
+U 1 1 61398CF9
+P 9000 750
+F 0 "#PWR0104" H 9000 600 50  0001 C CNN
+F 1 "VBUS" H 9015 923 50  0000 C CNN
+F 2 "" H 9000 750 50  0001 C CNN
+F 3 "" H 9000 750 50  0001 C CNN
+	1    9000 750 
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
