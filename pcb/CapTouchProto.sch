@@ -5,13 +5,13 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Test ESP32-WROOM-32E display board"
-Date "2021-09-05"
+Date "2021-09-26"
 Rev "1"
 Comp "Chris Mumford"
-Comment1 ""
+Comment1 "Fork this project and start making changes"
 Comment2 ""
-Comment3 ""
-Comment4 ""
+Comment3 "USB-C, ESP32, Capacitive touch"
+Comment4 "ESP32 w/display"
 $EndDescr
 $Comp
 L RF_Module:ESP32-WROOM-32D U2
