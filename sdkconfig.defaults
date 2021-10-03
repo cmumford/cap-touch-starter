@@ -74,11 +74,11 @@ CONFIG_LV_TFT_SPI_CLK_DIVIDER_1=y
 #
 # Display Pin Assignments
 #
-CONFIG_LV_DISP_SPI_MOSI=35
-CONFIG_LV_DISP_SPI_CLK=36
-CONFIG_LV_DISP_SPI_CS=7
-CONFIG_LV_DISP_PIN_DC=5
-CONFIG_LV_DISP_PIN_RST=0
+CONFIG_LV_DISP_SPI_MOSI=23
+CONFIG_LV_DISP_SPI_CLK=18
+CONFIG_LV_DISP_SPI_CS=5
+CONFIG_LV_DISP_PIN_DC=26
+CONFIG_LV_DISP_PIN_RST=27
 # end of Display Pin Assignments
 # end of LVGL TFT Display controller
 
@@ -92,9 +92,9 @@ CONFIG_LV_TOUCH_CONTROLLER_SPI_FSPI=y
 #
 # Touchpanel (XPT2046) Pin Assignments
 #
-CONFIG_LV_TOUCH_SPI_MISO=37
-CONFIG_LV_TOUCH_SPI_MOSI=35
-CONFIG_LV_TOUCH_SPI_CLK=36
+CONFIG_LV_TOUCH_SPI_MISO=19
+CONFIG_LV_TOUCH_SPI_MOSI=23
+CONFIG_LV_TOUCH_SPI_CLK=18
 CONFIG_LV_TOUCH_SPI_CS=10
 CONFIG_LV_TOUCH_PIN_IRQ=11
 # end of Touchpanel (XPT2046) Pin Assignments
@@ -105,3 +105,10 @@ CONFIG_LV_TOUCH_PIN_IRQ=11
 #
 CONFIG_ESP_MAIN_TASK_STACK_SIZE=2048
 # end of Common ESP-related
+
+####################################################################################
+# Project uses: ESP32-WROOM-32E (M113EH6400PH3Q0)
+# Datasheet: https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf
+# 4 MB external SPI flash
+####################################################################################
+
