@@ -1,7 +1,9 @@
 *.swp
 .vscode/
+build/
 .DS_Store
 workspace.code-workspace
+sdkconfig
 
 # KiCad files to ignore
 *-bak
