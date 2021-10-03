@@ -229,7 +229,7 @@ void guiTask(void* pvParameter) {
 }  // namespace
 
 extern "C" void app_main() {
-  ESP_LOGI(TAG, "CapTouchProto app!");
+  ESP_LOGI(TAG, "CapTouchStarter app!");
   LogHardwareInfo();
 
   xTaskCreatePinnedToCore(guiTask, "gui", 4096 * 2, nullptr, 0, nullptr, 1);
