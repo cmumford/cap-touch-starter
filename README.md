@@ -1,8 +1,14 @@
 # Introduction
 
-This is a simple starter project that contains an MCU (ESP32), and
-a capacitive touch screen. Nothing fancy, just something to fork when
-starting a new project that needs these capabilities.
+This is a simple hardware/software starter project that contains an
+MCU (ESP32), and a capacitive touch screen. Nothing fancy, just
+something to fork when starting a new project that needs these capabilities.
+
+It uses the [LVGL](https://lvgl.io/) graphics library, but could easily
+be swapped out with another.
+
+It includes a starter application which is built with the
+[ESP-IDF](https://github.com/espressif/esp-idf).
 
 # Main Components
 
