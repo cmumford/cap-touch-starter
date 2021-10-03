@@ -1,0 +1,79 @@
+
+# Before running:
+# . $HOME/esp/esp-idf/export.sh
+
+# pip install esptool
+
+BAUD=921600
+IDF=idf.py
+ESPTOOL=esptool.py
+FS_BLOCK_SIZE=4096
+FS_PAGE_SIZE=256
+FS_IMAGE_SIZE=0x100000
+PARTITION_OFFSET=0x110000
+
+ifeq ($(OS),Windows_NT)
+	RM_RF=powershell Remove-Item -Recurse -Force -ErrorAction Ignore
+else
+	RM_RF=rm -rf
+endif
+
+GIT_SUBMODULES=components/lvgl \
+							 components/lvgl_esp32_drivers
+
+.PHONY: format
+format:
+	clang-format -i main/*.cc main/*.c main/*.h
+
+.PHONY: clean
+clean:
+	${RM_RF} build
+	${RM_RF} sdkconfig
+	${RM_RF} sdkconfig.old
+
+.PHONY: config
+config:
+	${IDF} menuconfig
+
+.PHONY: target
+target:
+	${IDF} set-target esp32
+
+.PHONY: build
+build:
+	${IDF} build
+
+build/bootloader/bootloader.bin:
+	${IDF} build
+
+.PHONY: flash
+flash:
+	${IDF} --port ${FLASH_PORT} --baud ${BAUD} flash
+
+.PHONY: app-flash
+app-flash:
+	${IDF} --port ${FLASH_PORT} --baud ${BAUD} app-flash
+
+.PHONY: monitor
+monitor:
+	${IDF} --port ${MONITOR_PORT} monitor
+
+# Manual flash should be the equivalent of the flash target above.
+.PHONY: manual-flash
+manual-flash: build/bootloader/bootloader.bin
+	esptool.py --chip esp32 --port ${FLASH_PORT} --baud ${BAUD} \
+		--before=default_reset --after=no_reset write_flash \
+		--flash_mode dio --flash_size detect --flash_freq 80m \
+		0x1000 build/bootloader/bootloader.bin \
+		0x8000 build/partition_table/partition-table.bin \
+		0x10000 build/keyboard.bin \
+		0x210000 build/storage.bin; \
+		echo "Press the RST button."
+
+.PHONY: flash-erase
+flash-erase:
+	${ESPTOOL} --chip esp32 --port ${FLASH_PORT} --baud ${BAUD} erase_flash
+
+.PHONY: submodules
+submodules:
+	git submodule update --init ${GIT_SUBMODULES}

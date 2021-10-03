@@ -1,0 +1,107 @@
+CONFIG_IDF_CMAKE=y
+CONFIG_IDF_TARGET="esp32"
+CONFIG_IDF_TARGET_ESP32=y
+
+
+#
+# Compiler options
+#
+# CONFIG_COMPILER_STACK_CHECK_MODE_NONE is not set
+# CONFIG_COMPILER_STACK_CHECK_MODE_NORM is not set
+CONFIG_COMPILER_STACK_CHECK_MODE_STRONG=y
+# CONFIG_COMPILER_STACK_CHECK_MODE_ALL is not set
+CONFIG_COMPILER_STACK_CHECK=y
+# end of Compiler options
+
+# Remove (Heap memory debugging) section when shipping.
+
+#
+# Heap memory debugging
+#
+CONFIG_HEAP_POISONING_COMPREHENSIVE=y
+CONFIG_HEAP_TRACING_OFF=y
+CONFIG_HEAP_TASK_TRACKING=y
+# end of Heap memory debugging
+
+# Spotify auth headers are larger than default.
+
+#
+# LVGL configuration
+#
+CONFIG_LV_HOR_RES_MAX=320
+CONFIG_LV_VER_RES_MAX=240
+CONFIG_LV_COLOR_16_SWAP=y
+
+#
+# Memory manager settings
+#
+CONFIG_LV_MEM_SIZE_KILOBYTES=600
+# end of Memory manager settings
+
+#
+# Image decoder and cache
+#
+CONFIG_LV_IMG_CACHE_DEF_SIZE=0
+# end of Image decoder and cache
+
+#
+# Debug Settings
+#
+CONFIG_LV_USE_DEBUG=y
+CONFIG_LV_USE_ASSERT_MEM_INTEGRITY=y
+CONFIG_LV_USE_ASSERT_OBJ=y
+CONFIG_LV_USE_ASSERT_STYLE=y
+# end of Debug Settings
+
+#
+# Theme usage
+#
+CONFIG_LV_THEME_DEFAULT_FLAG_DARK=y
+# end of Theme usage
+# end of LVGL configuration
+
+#
+# LVGL TFT Display controller
+#
+CONFIG_DISPLAY_ORIENTATION_LANDSCAPE_INVERTED=y
+CONFIG_LV_DISPLAY_ORIENTATION=3
+CONFIG_CUSTOM_DISPLAY_BUFFER_SIZE=y
+CONFIG_CUSTOM_DISPLAY_BUFFER_BYTES=8192
+CONFIG_LV_TFT_DISPLAY_SPI_FULL_DUPLEX=y
+CONFIG_LV_TFT_USE_CUSTOM_SPI_CLK_DIVIDER=y
+CONFIG_LV_TFT_SPI_CLK_DIVIDER_1=y
+
+#
+# Display Pin Assignments
+#
+CONFIG_LV_DISP_SPI_MOSI=35
+CONFIG_LV_DISP_SPI_CLK=36
+CONFIG_LV_DISP_SPI_CS=7
+CONFIG_LV_DISP_PIN_DC=5
+CONFIG_LV_DISP_PIN_RST=0
+# end of Display Pin Assignments
+# end of LVGL TFT Display controller
+
+#
+# LVGL Touch controller
+#
+CONFIG_LV_TOUCH_CONTROLLER=1
+CONFIG_LV_TOUCH_CONTROLLER_XPT2046=y
+CONFIG_LV_TOUCH_CONTROLLER_SPI_FSPI=y
+
+#
+# Touchpanel (XPT2046) Pin Assignments
+#
+CONFIG_LV_TOUCH_SPI_MISO=37
+CONFIG_LV_TOUCH_SPI_MOSI=35
+CONFIG_LV_TOUCH_SPI_CLK=36
+CONFIG_LV_TOUCH_SPI_CS=10
+CONFIG_LV_TOUCH_PIN_IRQ=11
+# end of Touchpanel (XPT2046) Pin Assignments
+# end of LVGL Touch controller
+
+#
+# Common ESP-related
+#
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=2048
+# end of Common ESP-related
