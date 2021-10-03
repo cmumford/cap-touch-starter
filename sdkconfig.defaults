@@ -23,20 +23,46 @@ CONFIG_HEAP_TRACING_OFF=y
 CONFIG_HEAP_TASK_TRACKING=y
 # end of Heap memory debugging
 
-# Spotify auth headers are larger than default.
+#
+# Common ESP-related
+#
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=2048
+# end of Common ESP-related
+
+####################################################################################
+# Project uses: ESP32-WROOM-32E (M113EH6400PH3Q0)
+# Datasheet: https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf
+# 4 MB external SPI flash
+####################################################################################
+
+#
+# Serial flasher config
+#
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+CONFIG_ESPTOOLPY_FLASHSIZE="4MB"
+# end of Serial flasher config
+
+################################
+############# LVGL #############
+################################
 
 #
 # LVGL configuration
 #
 CONFIG_LV_HOR_RES_MAX=320
 CONFIG_LV_VER_RES_MAX=240
-CONFIG_LV_COLOR_16_SWAP=y
 
 #
-# Memory manager settings
+# Color settings
+#
+CONFIG_LV_COLOR_16_SWAP=y
+# end of Color settings
+
+#
+# Memory settings
 #
 CONFIG_LV_MEM_SIZE_KILOBYTES=600
-# end of Memory manager settings
+# end of Memory settings
 
 #
 # Image decoder and cache
@@ -99,16 +125,3 @@ CONFIG_LV_TOUCH_SPI_CS=10
 CONFIG_LV_TOUCH_PIN_IRQ=11
 # end of Touchpanel (XPT2046) Pin Assignments
 # end of LVGL Touch controller
-
-#
-# Common ESP-related
-#
-CONFIG_ESP_MAIN_TASK_STACK_SIZE=2048
-# end of Common ESP-related
-
-####################################################################################
-# Project uses: ESP32-WROOM-32E (M113EH6400PH3Q0)
-# Datasheet: https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf
-# 4 MB external SPI flash
-####################################################################################
-
