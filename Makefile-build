@@ -7,10 +7,6 @@
 BAUD=921600
 IDF=idf.py
 ESPTOOL=esptool.py
-FS_BLOCK_SIZE=4096
-FS_PAGE_SIZE=256
-FS_IMAGE_SIZE=0x100000
-PARTITION_OFFSET=0x110000
 
 ifeq ($(OS),Windows_NT)
 	RM_RF=powershell Remove-Item -Recurse -Force -ErrorAction Ignore
