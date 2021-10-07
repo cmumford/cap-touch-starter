@@ -19,7 +19,8 @@ else
 endif
 
 GIT_SUBMODULES=components/lvgl \
-							 components/lvgl_esp32_drivers
+	components/lvgl_esp32_drivers \
+	components/lv_examples/lv_examples
 
 .PHONY: format
 format:

@@ -1,4 +1,4 @@
-file( GLOB SOURCES *.cc *.c )
+file( GLOB SOURCES *.cc )
 
 idf_component_register(
   SRCS
@@ -6,9 +6,11 @@ idf_component_register(
   INCLUDE_DIRS
     "${CMAKE_SOURCE_DIR}/components"
     "${CMAKE_SOURCE_DIR}/components/lvgl/src"
+    "${CMAKE_SOURCE_DIR}/components/lv_examples"
     "${CMAKE_SOURCE_DIR}/main"
     "${IDF_PATH}/components"
     "${IDF_PATH}/components/freertos/include/freertos"
   REQUIRES
     lvgl_esp32_drivers
-)
+    lv_examples
+  )
