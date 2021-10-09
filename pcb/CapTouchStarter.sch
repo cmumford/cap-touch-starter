@@ -355,12 +355,7 @@ F 3 "" H 9000 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9500 1800 8750 1800
-Wire Wire Line
-	8750 1800 8750 1700
-Wire Wire Line
 	9500 1700 8750 1700
-Connection ~ 8750 1700
 Wire Wire Line
 	8750 1700 8750 1600
 Wire Wire Line
@@ -369,7 +364,7 @@ Connection ~ 8750 1600
 Wire Wire Line
 	8750 1600 8750 1450
 Wire Wire Line
-	9000 1900 9000 1500
+	9000 1900 9000 1800
 Wire Wire Line
 	9000 1500 9500 1500
 Wire Wire Line
@@ -1393,4 +1388,9 @@ F 3 "" H 1200 5500 50  0001 C CNN
 	1    1200 5500
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	9500 1800 9000 1800
+Connection ~ 9000 1800
+Wire Wire Line
+	9000 1800 9000 1500
 $EndSCHEMATC
