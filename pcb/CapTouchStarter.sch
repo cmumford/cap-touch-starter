@@ -161,8 +161,6 @@ Wire Wire Line
 	8900 5100 8900 5000
 Connection ~ 8900 5000
 Wire Wire Line
-	9000 750  9000 1000
-Wire Wire Line
 	9500 4100 9400 4100
 Wire Wire Line
 	9400 4100 9400 4000
@@ -1246,11 +1244,6 @@ F 3 "" H 2750 1600 50  0001 C CNN
 	1    2750 1600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9500 1000 9000 1000
-Connection ~ 9000 1000
-Wire Wire Line
-	9000 1000 9000 1100
 $Comp
 L Connector:TestPoint TP1
 U 1 1 61384E5A
@@ -1393,4 +1386,23 @@ Wire Wire Line
 Connection ~ 9000 1800
 Wire Wire Line
 	9000 1800 9000 1500
+Wire Wire Line
+	9000 750  9000 1100
+$Comp
+L power:GND #PWR0103
+U 1 1 61630EA8
+P 9300 800
+F 0 "#PWR0103" H 9300 550 50  0001 C CNN
+F 1 "GND" H 9305 627 50  0000 C CNN
+F 2 "" H 9300 800 50  0001 C CNN
+F 3 "" H 9300 800 50  0001 C CNN
+	1    9300 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9300 800  9300 750 
+Wire Wire Line
+	9300 750  9500 750 
+Wire Wire Line
+	9500 750  9500 1000
 $EndSCHEMATC
