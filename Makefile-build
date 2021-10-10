@@ -8,12 +8,6 @@ BAUD=921600
 IDF=idf.py
 ESPTOOL=esptool.py
 
-ifeq ($(OS),Windows_NT)
-	RM_RF=powershell Remove-Item -Recurse -Force -ErrorAction Ignore
-else
-	RM_RF=rm -rf
-endif
-
 GIT_SUBMODULES=components/lvgl \
 	components/lvgl_esp32_drivers \
 	components/lv_examples/lv_examples
@@ -24,9 +18,7 @@ format:
 
 .PHONY: clean
 clean:
-	${RM_RF} build
-	${RM_RF} sdkconfig
-	${RM_RF} sdkconfig.old
+	python scripts/delete-items.py build sdkconfig sdkconfig.old
 
 .PHONY: config
 config:
