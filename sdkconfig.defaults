@@ -1,19 +1,232 @@
+####################################################################################
+# Project uses: ESP32-WROOM-32E (M113EH6400PH3Q0)
+# Datasheet: https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf
+# 4 MB external SPI flash
+####################################################################################
+
 CONFIG_IDF_CMAKE=y
 CONFIG_IDF_TARGET="esp32"
 CONFIG_IDF_TARGET_ESP32=y
 
+#
+# SDK tool configuration
+#
+# end of SDK tool configuration
+
+#
+# Build type
+#
+# end of Build type
+
+#
+# Application manager
+#
+# end of Application manager
+
+#
+# Bootloader config
+#
+# end of Bootloader config
+
+#
+# Security features
+#
+# end of Security features
+
+#
+# Serial flasher config
+#
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+CONFIG_ESPTOOLPY_FLASHSIZE="4MB"
+# end of Serial flasher config
+
+#
+# Partition Table
+#
+# end of Partition Table
 
 #
 # Compiler options
 #
-# CONFIG_COMPILER_STACK_CHECK_MODE_NONE is not set
-# CONFIG_COMPILER_STACK_CHECK_MODE_NORM is not set
 CONFIG_COMPILER_STACK_CHECK_MODE_STRONG=y
-# CONFIG_COMPILER_STACK_CHECK_MODE_ALL is not set
 CONFIG_COMPILER_STACK_CHECK=y
 # end of Compiler options
 
-# Remove (Heap memory debugging) section when shipping.
+#
+# Component config
+#
+
+#
+# Application Level Tracing
+#
+# end of Application Level Tracing
+
+#
+# ESP-ASIO
+#
+# end of ESP-ASIO
+
+#
+# Bluetooth
+#
+# CONFIG_BT_ENABLED is not set
+# end of Bluetooth
+
+#
+# CoAP Configuration
+#
+# end of CoAP Configuration
+
+#
+# Driver configurations
+#
+
+#
+# ADC configuration
+#
+# end of ADC configuration
+
+#
+# SPI configuration
+#
+# end of SPI configuration
+
+#
+# TWAI configuration
+#
+# end of TWAI configuration
+
+#
+# UART configuration
+#
+# end of UART configuration
+
+#
+# RTCIO configuration
+#
+# end of RTCIO configuration
+
+#
+# GPIO Configuration
+#
+# end of GPIO Configuration
+# end of Driver configurations
+
+#
+# eFuse Bit Manager
+#
+# end of eFuse Bit Manager
+
+#
+# ESP-TLS
+#
+# end of ESP-TLS
+
+#
+# ESP32-specific
+#
+# end of ESP32-specific
+
+#
+# ADC-Calibration
+#
+# end of ADC-Calibration
+
+#
+# Common ESP-related
+#
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=2048
+# end of Common ESP-related
+
+#
+# Ethernet
+#
+# end of Ethernet
+
+#
+# Event Loop Library
+#
+# end of Event Loop Library
+
+#
+# GDB Stub
+#
+# end of GDB Stub
+
+#
+# ESP HTTP client
+#
+# end of ESP HTTP client
+
+#
+# HTTP Server
+#
+# end of HTTP Server
+
+#
+# ESP HTTPS OTA
+#
+# end of ESP HTTPS OTA
+
+#
+# ESP HTTPS server
+#
+# end of ESP HTTPS server
+
+#
+# ESP NETIF Adapter
+#
+# end of ESP NETIF Adapter
+
+#
+# Power Management
+#
+# end of Power Management
+
+#
+# ESP System Settings
+#
+
+#
+# Memory protection
+#
+# end of Memory protection
+# end of ESP System Settings
+
+#
+# High resolution timer (esp_timer)
+#
+# end of High resolution timer (esp_timer)
+
+#
+# Wi-Fi
+#
+# end of Wi-Fi
+
+#
+# PHY
+#
+# end of PHY
+
+#
+# Core dump
+#
+# end of Core dump
+
+#
+# FAT Filesystem support
+#
+# end of FAT Filesystem support
+
+#
+# Modbus configuration
+#
+# end of Modbus configuration
+
+#
+# FreeRTOS
+#
+# end of FreeRTOS
 
 #
 # Heap memory debugging
@@ -24,33 +237,198 @@ CONFIG_HEAP_TASK_TRACKING=y
 # end of Heap memory debugging
 
 #
-# Common ESP-related
+# jsmn
 #
-CONFIG_ESP_MAIN_TASK_STACK_SIZE=2048
-# end of Common ESP-related
-
-####################################################################################
-# Project uses: ESP32-WROOM-32E (M113EH6400PH3Q0)
-# Datasheet: https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf
-# 4 MB external SPI flash
-####################################################################################
+# end of jsmn
 
 #
-# Serial flasher config
+# libsodium
 #
-CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
-CONFIG_ESPTOOLPY_FLASHSIZE="4MB"
-# end of Serial flasher config
+# end of libsodium
 
-################################
-############# LVGL #############
-################################
+#
+# Log output
+#
+# end of Log output
+
+#
+# LWIP
+#
+
+#
+# DHCP server
+#
+# end of DHCP server
+
+#
+# TCP
+#
+# end of TCP
+
+#
+# UDP
+#
+# end of UDP
+
+#
+# Checksums
+#
+# end of Checksums
+
+#
+# ICMP
+#
+# end of ICMP
+
+#
+# LWIP RAW API
+#
+# end of LWIP RAW API
+
+#
+# SNTP
+#
+# end of SNTP
+
+#
+# Hooks
+#
+# end of Hooks
+
+# end of LWIP
+
+#
+# mbedTLS
+#
+
+#
+# Certificate Bundle
+#
+# end of Certificate Bundle
+
+#
+# TLS Key Exchange Methods
+#
+# end of TLS Key Exchange Methods
+
+#
+# Symmetric Ciphers
+#
+# end of Symmetric Ciphers
+
+
+#
+# Certificates
+#
+# end of Certificates
+
+# end of mbedTLS
+
+#
+# mDNS
+#
+# end of mDNS
+
+#
+# ESP-MQTT Configurations
+#
+# end of ESP-MQTT Configurations
+
+#
+# Newlib
+#
+# end of Newlib
+
+#
+# NVS
+#
+# end of NVS
+
+#
+# OpenSSL
+#
+# end of OpenSSL
+
+#
+# PThreads
+#
+# end of PThreads
+
+#
+# SPI Flash driver
+#
+
+#
+# Auto-detect flash chips
+#
+# end of Auto-detect flash chips
+
+# end of SPI Flash driver
+
+#
+# SPIFFS Configuration
+#
+
+#
+# SPIFFS Cache Configuration
+#
+# end of SPIFFS Cache Configuration
+
+#
+# Debug Configuration
+#
+# end of Debug Configuration
+# end of SPIFFS Configuration
+
+#
+# TCP Transport
+#
+# end of TCP Transport
+
+#
+# TinyUSB
+#
+# end of TinyUSB
+
+#
+# Unity unit testing library
+#
+# end of Unity unit testing library
+
+#
+# Virtual file system
+#
+
+#
+# Host File System I/O (Semihosting)
+#
+# end of Host File System I/O (Semihosting)
+# end of Virtual file system
+
+#
+# Wear Levelling
+#
+# end of Wear Levelling
+
+#
+# Wi-Fi Provisioning Manager
+#
+# end of Wi-Fi Provisioning Manager
+
+#
+# Supplicant
+#
+# end of Supplicant
+
+#
+# lv_examples configuration
+#
+CONFIG_LV_USE_DEMO_WIDGETS=y
+# end of lv_examples configuration
 
 #
 # LVGL configuration
 #
-CONFIG_LV_HOR_RES_MAX=320
-CONFIG_LV_VER_RES_MAX=240
 
 #
 # Color settings
@@ -65,25 +443,106 @@ CONFIG_LV_MEM_SIZE_KILOBYTES=600
 # end of Memory settings
 
 #
-# Image decoder and cache
+# HAL Settings
 #
-CONFIG_LV_IMG_CACHE_DEF_SIZE=0
-# end of Image decoder and cache
+# end of HAL Settings
 
 #
-# Debug Settings
+# Feature configuration
 #
-CONFIG_LV_USE_DEBUG=y
-CONFIG_LV_USE_ASSERT_MEM_INTEGRITY=y
-CONFIG_LV_USE_ASSERT_OBJ=y
-CONFIG_LV_USE_ASSERT_STYLE=y
-# end of Debug Settings
 
 #
-# Theme usage
+# Drawing
 #
-CONFIG_LV_THEME_DEFAULT_FLAG_DARK=y
-# end of Theme usage
+# end of Drawing
+
+#
+# GPU
+#
+# end of GPU
+
+#
+# Logging
+#
+# end of Logging
+
+#
+# Asserts
+#
+# end of Asserts
+
+#
+# Others
+#
+# end of Others
+
+#
+# Compiler settings
+#
+# end of Compiler settings
+
+# end of Feature configuration
+
+#
+# Font usage
+#
+
+#
+# Enable built-in fonts
+#
+CONFIG_LV_FONT_MONTSERRAT_12=y
+CONFIG_LV_FONT_MONTSERRAT_14=y
+CONFIG_LV_FONT_MONTSERRAT_16=y
+# end of Enable built-in fonts
+
+CONFIG_LV_FONT_DEFAULT_MONTSERRAT_12=y
+# end of Font usage
+
+#
+# Themes
+#
+# end of Themes
+
+#
+# Text Settings
+#
+# end of Text Settings
+
+#
+# Widget usage
+#
+CONFIG_LV_USE_ARC=y
+CONFIG_LV_USE_BAR=y
+CONFIG_LV_USE_BTN=y
+CONFIG_LV_USE_BTNMATRIX=y
+CONFIG_LV_USE_CANVAS=y
+CONFIG_LV_USE_CHECKBOX=y
+CONFIG_LV_USE_CHART=y
+CONFIG_LV_USE_DROPDOWN=y
+CONFIG_LV_USE_IMG=y
+CONFIG_LV_USE_LABEL=y
+# CONFIG_LV_LABEL_TEXT_SEL is not set
+# CONFIG_LV_LABEL_LONG_TXT_HINT is not set
+CONFIG_LV_USE_LINE=y
+CONFIG_LV_USE_METER=y
+CONFIG_LV_USE_ROLLER=y
+CONFIG_LV_ROLLER_INF_PAGES=7
+CONFIG_LV_USE_SLIDER=y
+CONFIG_LV_USE_SWITCH=y
+CONFIG_LV_USE_TEXTAREA=y
+CONFIG_LV_TEXTAREA_DEF_PWN_SHOW_TIME=1500
+CONFIG_LV_USE_TABLE=y
+# end of Widget usage
+
+#
+# Extra components
+#
+# end of Extra components
+
+#
+# Layouts
+#
+# end of Layouts
 # end of LVGL configuration
 
 #
@@ -128,20 +587,12 @@ CONFIG_LV_TOUCH_CONTROLLER_NONE=y
 CONFIG_LV_I2C_TOUCH_PORT=0
 # end of LVGL Touch controller
 # end of LVGL ESP Drivers
+# end of Component config
 
 #
-# Font usage
+# Compatibility options
 #
+# end of Compatibility options
 
-#
-# Enable built-in fonts
-#
-# CONFIG_LV_FONT_MONTSERRAT_8 is not set
-# CONFIG_LV_FONT_MONTSERRAT_10 is not set
-CONFIG_LV_FONT_MONTSERRAT_12=y
-CONFIG_LV_FONT_MONTSERRAT_14=y
-CONFIG_LV_FONT_MONTSERRAT_16=y
-# end of Enable built-in fonts
-
-CONFIG_LV_FONT_DEFAULT_MONTSERRAT_12=y
-# end of Font usage
+# Deprecated options for backward compatibility
+# End of deprecated options
