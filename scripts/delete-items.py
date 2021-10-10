@@ -23,8 +23,8 @@ def DeleteItem(item):
     if noop:
         return
     if not os.path.exists(item):
-        if verbosity > 0:
-            print('does not exist: "%s"' % item)
+        if verbosity > 1:
+            print('does not exist: "%s" (ignoring)' % item)
         return
     if os.path.isdir(item):
         rmtree(item)
