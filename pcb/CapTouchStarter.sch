@@ -665,9 +665,9 @@ Wire Wire Line
 	3100 4000 3100 4550
 Wire Wire Line
 	3000 4000 3000 4550
-Text GLabel 4100 5050 2    50   Input ~ 0
+Text GLabel 3750 5050 2    50   Input ~ 0
 RXD
-Text GLabel 4100 4950 2    50   Input ~ 0
+Text GLabel 3750 4950 2    50   Input ~ 0
 TXD
 Text GLabel 7000 2100 2    50   Input ~ 0
 TXD
@@ -688,25 +688,6 @@ NoConn ~ 3600 6750
 NoConn ~ 3600 5750
 NoConn ~ 3600 5950
 NoConn ~ 3600 6150
-$Comp
-L Device:R R12
-U 1 1 61729413
-P 3850 4950
-F 0 "R12" V 3800 5100 31  0000 C CNN
-F 1 "0Ω" V 3850 4950 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3780 4950 50  0001 C CNN
-F 3 "~" H 3850 4950 50  0001 C CNN
-	1    3850 4950
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3600 4950 3700 4950
-Wire Wire Line
-	3600 5050 3700 5050
-Wire Wire Line
-	4000 4950 4100 4950
-Wire Wire Line
-	4000 5050 4100 5050
 Wire Wire Line
 	7050 5450 7050 5600
 Wire Wire Line
@@ -963,17 +944,6 @@ Wire Wire Line
 	2400 5450 2400 5250
 Wire Wire Line
 	2500 5450 2500 5350
-$Comp
-L Device:R R13
-U 1 1 61729F89
-P 3850 5050
-F 0 "R13" V 3900 5200 31  0000 C CNN
-F 1 "0Ω" V 3850 5050 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3780 5050 50  0001 C CNN
-F 3 "~" H 3850 5050 50  0001 C CNN
-	1    3850 5050
-	0    1    1    0   
-$EndComp
 Text GLabel 2150 5250 0    50   Input ~ 0
 D+
 Wire Wire Line
@@ -1357,4 +1327,8 @@ F 3 "" H 850 3550 50  0001 C CNN
 	1    850  3550
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3750 4950 3600 4950
+Wire Wire Line
+	3750 5050 3600 5050
 $EndSCHEMATC
