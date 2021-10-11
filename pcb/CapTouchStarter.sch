@@ -362,8 +362,6 @@ Connection ~ 8750 1600
 Wire Wire Line
 	8750 1600 8750 1450
 Wire Wire Line
-	9000 1900 9000 1800
-Wire Wire Line
 	9000 1500 9500 1500
 Wire Wire Line
 	6950 3900 9250 3900
@@ -1382,11 +1380,6 @@ F 3 "" H 1200 5500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9500 1800 9000 1800
-Connection ~ 9000 1800
-Wire Wire Line
-	9000 1800 9000 1500
-Wire Wire Line
 	9000 750  9000 1100
 $Comp
 L power:GND #PWR0103
@@ -1405,4 +1398,19 @@ Wire Wire Line
 	9300 750  9500 750 
 Wire Wire Line
 	9500 750  9500 1000
+Text Notes 10450 1800 0    50   ~ 0
+Bus Sel\n[0,1,1,1]\n4-wires_8-bit SPI II\n/CS,RS,SDI,SDO,SCL
+Wire Notes Line
+	10350 1450 10400 1450
+Wire Notes Line
+	10400 1450 10400 1800
+Wire Notes Line
+	10400 1800 10350 1800
+Wire Wire Line
+	9000 1500 9000 1900
+Wire Wire Line
+	9500 1800 8750 1800
+Wire Wire Line
+	8750 1800 8750 1700
+Connection ~ 8750 1700
 $EndSCHEMATC
