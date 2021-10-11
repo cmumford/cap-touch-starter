@@ -27,15 +27,15 @@ $EndComp
 $Comp
 L 62684-50110:62684-50110 J2
 U 1 1 6133B4EE
-P 10000 3500
-F 0 "J2" H 10330 3496 50  0000 L CNN
-F 1 "62684-50110" H 10330 3405 50  0000 L CNN
-F 2 "62684-50110:62684-50110" H 10400 3650 50  0001 L BNN
-F 3 "" H 10000 3500 50  0001 L BNN
-F 4 "Compliant" H 10500 3500 50  0001 L BNN "EU_RoHS_Compliance"
-F 5 "62684-50110" H 10450 3800 50  0001 L BNN "Comment"
-	1    10000 3500
-	1    0    0    -1  
+P 10000 3400
+F 0 "J2" H 10330 3396 50  0000 L CNN
+F 1 "62684-50110" H 10330 3305 50  0000 L CNN
+F 2 "62684-50110:62684-50110" H 10400 3550 50  0001 L BNN
+F 3 "" H 10000 3400 50  0001 L BNN
+F 4 "Compliant" H 10500 3400 50  0001 L BNN "EU_RoHS_Compliance"
+F 5 "62684-50110" H 10450 3700 50  0001 L BNN "Comment"
+	1    10000 3400
+	1    0    0    1   
 $EndComp
 Text Notes 9885 6060 0    63   ~ 0
 LEDK\nLED-A1\nLED-A2\nLED-A3\nLED-A4\nIM0\nIM1\nIM2\nIM3\n/RESET\nVSYNC\nHSYNC\nDOTCLK\nDE\nDB17\nDB16\nDB15\nDB14\nDB13\nDB12\nDB11\nDB10\nDB9\nDB8\nDB7\nDB6\nDB5\nDB4\nDB3\nDB2\nDB1\nDB0\nSDO (MISO)\nSDI (MOSI)\n/RD\n/WR_RS\nRS_SCL\n/CS\nTE\nIOVCC\nIOVCC\nVCI\nGND\nCTP_SCL\nCTP_SDA\nCTP_IRQ\nCTP_RES\nGND\nGND\nGND\n\n
@@ -66,8 +66,6 @@ Wire Wire Line
 Wire Wire Line
 	9350 5200 9350 5700
 Connection ~ 9350 5700
-NoConn ~ 9500 6000
-NoConn ~ 9500 6100
 Wire Wire Line
 	9500 5600 9250 5600
 Wire Wire Line
@@ -160,92 +158,6 @@ Wire Wire Line
 Wire Wire Line
 	8900 5100 8900 5000
 Connection ~ 8900 5000
-Wire Wire Line
-	9500 4100 9400 4100
-Wire Wire Line
-	9400 4100 9400 4000
-Wire Wire Line
-	9400 2400 9500 2400
-Wire Wire Line
-	9500 2500 9400 2500
-Connection ~ 9400 2500
-Wire Wire Line
-	9400 2500 9400 2400
-Wire Wire Line
-	9500 2600 9400 2600
-Connection ~ 9400 2600
-Wire Wire Line
-	9400 2600 9400 2500
-Wire Wire Line
-	9500 2700 9400 2700
-Connection ~ 9400 2700
-Wire Wire Line
-	9400 2700 9400 2600
-Wire Wire Line
-	9500 2800 9400 2800
-Connection ~ 9400 2800
-Wire Wire Line
-	9400 2800 9400 2700
-Wire Wire Line
-	9500 2900 9400 2900
-Connection ~ 9400 2900
-Wire Wire Line
-	9400 2900 9400 2800
-Wire Wire Line
-	9500 3000 9400 3000
-Connection ~ 9400 3000
-Wire Wire Line
-	9400 3000 9400 2900
-Wire Wire Line
-	9500 3100 9400 3100
-Connection ~ 9400 3100
-Wire Wire Line
-	9400 3100 9400 3000
-Wire Wire Line
-	9500 3200 9400 3200
-Connection ~ 9400 3200
-Wire Wire Line
-	9400 3200 9400 3100
-Wire Wire Line
-	9500 3300 9400 3300
-Connection ~ 9400 3300
-Wire Wire Line
-	9400 3300 9400 3200
-Wire Wire Line
-	9500 3400 9400 3400
-Connection ~ 9400 3400
-Wire Wire Line
-	9400 3400 9400 3300
-Wire Wire Line
-	9500 3500 9400 3500
-Connection ~ 9400 3500
-Wire Wire Line
-	9400 3500 9400 3400
-Wire Wire Line
-	9500 3600 9400 3600
-Connection ~ 9400 3600
-Wire Wire Line
-	9400 3600 9400 3500
-Wire Wire Line
-	9500 3700 9400 3700
-Connection ~ 9400 3700
-Wire Wire Line
-	9400 3700 9400 3600
-Wire Wire Line
-	9500 3800 9400 3800
-Connection ~ 9400 3800
-Wire Wire Line
-	9400 3800 9400 3700
-Wire Wire Line
-	9500 3900 9400 3900
-Connection ~ 9400 3900
-Wire Wire Line
-	9400 3900 9400 3800
-Wire Wire Line
-	9500 4000 9400 4000
-Connection ~ 9400 4000
-Wire Wire Line
-	9400 4000 9400 3900
 Wire Wire Line
 	6950 3300 8600 3300
 Wire Wire Line
@@ -1141,7 +1053,6 @@ NoConn ~ 1750 2850
 NoConn ~ 1750 2950
 NoConn ~ 1750 3150
 NoConn ~ 1750 3250
-NoConn ~ 850  3550
 NoConn ~ 3600 4750
 NoConn ~ 3600 5150
 NoConn ~ 3600 5350
@@ -1395,9 +1306,7 @@ $EndComp
 Wire Wire Line
 	9300 800  9300 750 
 Wire Wire Line
-	9300 750  9500 750 
-Wire Wire Line
-	9500 750  9500 1000
+	9300 750  9450 750 
 Text Notes 10450 1800 0    50   ~ 0
 Bus Sel\n[0,1,1,1]\n4-wires_8-bit SPI II\n/CS,RS,SDI,SDO,SCL
 Wire Notes Line
@@ -1413,4 +1322,39 @@ Wire Wire Line
 Wire Wire Line
 	8750 1800 8750 1700
 Connection ~ 8750 1700
+Wire Wire Line
+	9500 1000 9450 1000
+Wire Wire Line
+	9450 1000 9450 750 
+NoConn ~ 9500 800 
+NoConn ~ 9500 900 
+NoConn ~ 9500 2400
+NoConn ~ 9500 2500
+NoConn ~ 9500 2600
+NoConn ~ 9500 2700
+NoConn ~ 9500 2800
+NoConn ~ 9500 2900
+NoConn ~ 9500 3000
+NoConn ~ 9500 3100
+NoConn ~ 9500 3200
+NoConn ~ 9500 3300
+NoConn ~ 9500 3400
+NoConn ~ 9500 3500
+NoConn ~ 9500 3600
+NoConn ~ 9500 3700
+NoConn ~ 9500 3800
+NoConn ~ 9500 3900
+NoConn ~ 9500 4000
+NoConn ~ 9500 4100
+$Comp
+L power:GND #PWR0104
+U 1 1 617A8429
+P 850 3550
+F 0 "#PWR0104" H 850 3300 50  0001 C CNN
+F 1 "GND" H 855 3377 50  0000 C CNN
+F 2 "" H 850 3550 50  0001 C CNN
+F 3 "" H 850 3550 50  0001 C CNN
+	1    850  3550
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
