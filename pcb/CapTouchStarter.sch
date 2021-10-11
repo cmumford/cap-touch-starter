@@ -167,7 +167,7 @@ Wire Wire Line
 Wire Wire Line
 	8150 4300 9500 4300
 Wire Wire Line
-	9500 4600 8450 4600
+	9500 4600 8550 4600
 Wire Wire Line
 	8450 4600 8450 3200
 Wire Wire Line
@@ -179,13 +179,13 @@ Wire Wire Line
 Wire Wire Line
 	8300 2500 6950 2500
 Wire Wire Line
-	9500 5400 8000 5400
+	9500 5400 8600 5400
 Wire Wire Line
 	8000 5400 8000 3400
 Wire Wire Line
 	8000 3400 6950 3400
 Wire Wire Line
-	9500 5300 7850 5300
+	9500 5300 8450 5300
 Wire Wire Line
 	7850 5300 7850 3500
 Wire Wire Line
@@ -202,9 +202,9 @@ F 3 "" H 6350 4750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9500 5500 7700 5500
+	9500 5500 8750 5500
 Wire Wire Line
-	7700 5500 7700 3700
+	7700 5500 7700 4250
 Wire Wire Line
 	7700 3700 6950 3700
 $Comp
@@ -250,7 +250,7 @@ Wire Wire Line
 Wire Wire Line
 	9500 4500 8750 4500
 Wire Wire Line
-	8750 4500 8750 3800
+	8750 4500 8750 4050
 Wire Wire Line
 	8750 3800 6950 3800
 $Comp
@@ -279,7 +279,7 @@ Wire Wire Line
 	6950 3900 9250 3900
 Connection ~ 9250 3900
 Wire Wire Line
-	9250 3900 9250 1900
+	9250 3900 9250 2400
 $Comp
 L Device:C_Small C7
 U 1 1 6136B483
@@ -1401,4 +1401,110 @@ Wire Wire Line
 Wire Wire Line
 	4650 6550 4650 6350
 Connection ~ 4650 6350
+Text GLabel 8650 3300 2    50   Input ~ 0
+MISO
+Text GLabel 8150 4350 3    50   Input ~ 0
+MOSI
+Wire Wire Line
+	8650 3300 8600 3300
+Connection ~ 8600 3300
+Wire Wire Line
+	8150 4300 8150 4350
+Connection ~ 8150 4300
+Text GLabel 8300 4800 3    50   Input ~ 0
+CS
+Wire Wire Line
+	8300 4700 8300 4800
+Connection ~ 8300 4700
+Text GLabel 8750 5600 3    50   Input ~ 0
+CTP_IRQ
+Wire Wire Line
+	8750 5600 8750 5500
+Connection ~ 8750 5500
+Wire Wire Line
+	8750 5500 7700 5500
+Text GLabel 8600 5600 3    50   Input ~ 0
+CTP_SDA
+Wire Wire Line
+	8600 5400 8600 5600
+Connection ~ 8600 5400
+Wire Wire Line
+	8600 5400 8000 5400
+Text GLabel 8450 5600 3    50   Input ~ 0
+CTP_SCL
+Wire Wire Line
+	8450 5600 8450 5300
+Connection ~ 8450 5300
+Wire Wire Line
+	8450 5300 7850 5300
+Text GLabel 8550 4800 3    50   Input ~ 0
+RS_SCL
+Wire Wire Line
+	8550 4800 8550 4600
+Connection ~ 8550 4600
+Wire Wire Line
+	8550 4600 8450 4600
+Text GLabel 9050 2400 0    50   Input ~ 0
+RESET
+Wire Wire Line
+	9050 2400 9250 2400
+Connection ~ 9250 2400
+Wire Wire Line
+	9250 2400 9250 1900
+Text GLabel 8850 4050 2    50   Input ~ 0
+DC
+Wire Wire Line
+	8850 4050 8750 4050
+Connection ~ 8750 4050
+Wire Wire Line
+	8750 4050 8750 3800
+$Comp
+L Connector:Conn_01x01_Male TP7
+U 1 1 617087C9
+P 8600 3100
+F 0 "TP7" V 8600 3250 50  0000 R CNN
+F 1 "MISO" V 8700 3300 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm" H 8600 3100 50  0001 C CNN
+F 3 "~" H 8600 3100 50  0001 C CNN
+	1    8600 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male TP6
+U 1 1 6170A396
+P 8150 3400
+F 0 "TP6" H 8250 3350 50  0000 R CNN
+F 1 "MOSI" H 8300 3450 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm" H 8150 3400 50  0001 C CNN
+F 3 "~" H 8150 3400 50  0001 C CNN
+	1    8150 3400
+	0    1    1    0   
+$EndComp
+Connection ~ 8150 3600
+$Comp
+L Connector:Conn_01x01_Male TP8
+U 1 1 61659F86
+P 8450 3000
+F 0 "TP8" V 8300 3100 50  0000 R CNN
+F 1 "SPI_SCL" V 8400 3250 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm" H 8450 3000 50  0001 C CNN
+F 3 "~" H 8450 3000 50  0001 C CNN
+	1    8450 3000
+	0    1    1    0   
+$EndComp
+Connection ~ 8450 3200
+$Comp
+L Connector:Conn_01x01_Male TP9
+U 1 1 616686DD
+P 7500 4250
+F 0 "TP9" H 7450 4250 50  0000 R CNN
+F 1 "TP_IRQ" H 7600 4150 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm" H 7500 4250 50  0001 C CNN
+F 3 "~" H 7500 4250 50  0001 C CNN
+	1    7500 4250
+	1    0    0    -1  
+$EndComp
+Connection ~ 7700 4250
+Wire Wire Line
+	7700 4250 7700 3700
 $EndSCHEMATC
