@@ -924,10 +924,6 @@ NoConn ~ 6250 3400
 NoConn ~ 6250 3500
 NoConn ~ 7450 2000
 NoConn ~ 7450 2200
-NoConn ~ 7450 2400
-NoConn ~ 7450 2500
-NoConn ~ 7450 2600
-NoConn ~ 7450 2700
 NoConn ~ 7450 2800
 NoConn ~ 7450 2900
 NoConn ~ 7450 3800
@@ -1459,4 +1455,64 @@ Connection ~ 5650 5550
 Wire Wire Line
 	5750 5350 5650 5350
 Connection ~ 5650 5350
+$Comp
+L Connector:Conn_ARM_JTAG_SWD_10 J3
+U 1 1 61754D79
+P 4150 3250
+F 0 "J3" H 3707 3296 50  0000 R CNN
+F 1 "Conn_ARM_JTAG_SWD_10" H 3700 3000 50  0000 R CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical" H 4150 3250 50  0001 C CNN
+F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf" V 3800 2000 50  0001 C CNN
+	1    4150 3250
+	1    0    0    -1  
+$EndComp
+Text GLabel 4650 3150 2    50   Input ~ 0
+JTAG_TCK
+Text GLabel 4650 3250 2    50   Input ~ 0
+JTAG_TMS
+Text GLabel 4650 3350 2    50   Input ~ 0
+JTAG_TDO
+Text GLabel 4650 3450 2    50   Input ~ 0
+JTAG_TDI
+$Comp
+L power:GND #PWR0101
+U 1 1 61758443
+P 4150 3950
+F 0 "#PWR0101" H 4150 3700 50  0001 C CNN
+F 1 "GND" H 4155 3777 50  0000 C CNN
+F 2 "" H 4150 3950 50  0001 C CNN
+F 3 "" H 4150 3950 50  0001 C CNN
+	1    4150 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 3850 4050 3900
+Wire Wire Line
+	4050 3900 4150 3900
+Wire Wire Line
+	4150 3900 4150 3950
+Wire Wire Line
+	4150 3850 4150 3900
+Connection ~ 4150 3900
+$Comp
+L power:+3V3 #PWR0102
+U 1 1 6176DA99
+P 4150 2650
+F 0 "#PWR0102" H 4150 2500 50  0001 C CNN
+F 1 "+3V3" H 4165 2823 50  0000 C CNN
+F 2 "" H 4150 2650 50  0001 C CNN
+F 3 "" H 4150 2650 50  0001 C CNN
+	1    4150 2650
+	1    0    0    -1  
+$EndComp
+Text GLabel 7450 2400 2    50   Input ~ 0
+JTAG_TDI
+Text GLabel 7450 2500 2    50   Input ~ 0
+JTAG_TCK
+Text GLabel 7450 2600 2    50   Input ~ 0
+JTAG_TMS
+Text GLabel 7450 2700 2    50   Input ~ 0
+JTAG_TDO
+Text GLabel 4650 2950 2    50   Input ~ 0
+EN
 $EndSCHEMATC
