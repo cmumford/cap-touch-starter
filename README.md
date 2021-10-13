@@ -23,4 +23,4 @@ See the [pcb/](pcb/) folder for the schematic and board layout.
 
 # Software
 
-<i>Coming...</i>
+The application source uses [lv_demos](https://github.com/lvgl/lv_demos).
