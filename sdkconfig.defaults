@@ -423,10 +423,10 @@ CONFIG_HEAP_TASK_TRACKING=y
 # end of Supplicant
 
 #
-# lv_examples configuration
+# lv_demos configuration
 #
 CONFIG_LV_USE_DEMO_WIDGETS=y
-# end of lv_examples configuration
+# end of lv_demos configuration
 
 #
 # LVGL configuration

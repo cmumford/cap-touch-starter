@@ -1,6 +1,6 @@
-# Kconfig for lv_examples v7.4.0
+# Kconfig for lv_demos v8
 
-menu "lv_examples configuration"
+menu "lv_demos configuration"
 
     config LV_EX_PRINTF
         bool "Enable printf-ing data in demos and examples."

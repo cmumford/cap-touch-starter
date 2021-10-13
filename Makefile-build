@@ -10,7 +10,7 @@ ESPTOOL=esptool.py
 
 GIT_SUBMODULES=components/lvgl \
 	components/lvgl_esp32_drivers \
-	components/lv_examples/lv_examples
+	components/lv_demos/lv_demos
 
 .PHONY: format
 format:
