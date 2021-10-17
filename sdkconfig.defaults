@@ -306,6 +306,7 @@ CONFIG_HEAP_TASK_TRACKING=y
 #
 # Certificate Bundle
 #
+# CONFIG_MBEDTLS_CERTIFICATE_BUNDLE is not set
 # end of Certificate Bundle
 
 #
