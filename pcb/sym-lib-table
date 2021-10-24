@@ -1,4 +1,5 @@
 (sym_lib_table
   (lib (name 62684-50110)(type Legacy)(uri ${KIPRJMOD}/library/62684-50110/62684-50110.lib)(options "")(descr ""))
   (lib (name ESP32-WROOM-32E)(type Legacy)(uri ${KIPRJMOD}/library/ESP32-WROOM-32E/ESP32-WROOM-32E.lib)(options "")(descr ""))
+  (lib (name LY68L6400SLIT)(type Legacy)(uri ${KIPRJMOD}/library/LY68L6400SLIT/LY68L6400SLIT.lib)(options "")(descr ""))
 )
