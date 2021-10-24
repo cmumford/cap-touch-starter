@@ -916,15 +916,9 @@ NoConn ~ 3000 5000
 NoConn ~ 3000 5400
 NoConn ~ 3000 5600
 NoConn ~ 3000 5700
-NoConn ~ 6250 3000
-NoConn ~ 6250 3100
-NoConn ~ 6250 3200
-NoConn ~ 6250 3300
-NoConn ~ 6250 3400
-NoConn ~ 6250 3500
 NoConn ~ 7450 2000
 NoConn ~ 7450 2200
-NoConn ~ 7450 2800
+NoConn ~ 6250 3500
 NoConn ~ 7450 2900
 NoConn ~ 7450 3800
 NoConn ~ 7450 3900
@@ -1266,7 +1260,7 @@ CTP_SDA
 Text GLabel 9500 5300 0    50   Input ~ 0
 CTP_SCL
 Text GLabel 9150 4600 0    50   Input ~ 0
-RS_SCL
+SPI_SCL
 Text GLabel 9500 1900 0    50   Input ~ 0
 RESET
 Text GLabel 9500 4500 0    50   Input ~ 0
@@ -1326,7 +1320,7 @@ MOSI
 Text GLabel 7450 3100 2    50   Input ~ 0
 MISO
 Text GLabel 7450 3000 2    50   Input ~ 0
-RS_SCL
+SPI_SCL
 Text GLabel 8400 2150 2    50   Input ~ 0
 CTP_SCL
 Text GLabel 8100 2150 0    50   Input ~ 0
@@ -1458,51 +1452,51 @@ Connection ~ 5650 5350
 $Comp
 L Connector:Conn_ARM_JTAG_SWD_10 J3
 U 1 1 61754D79
-P 4150 3250
-F 0 "J3" H 3707 3296 50  0000 R CNN
-F 1 "Conn_ARM_JTAG_SWD_10" H 3700 3000 50  0000 R CNN
-F 2 "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical" H 4150 3250 50  0001 C CNN
-F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf" V 3800 2000 50  0001 C CNN
-	1    4150 3250
+P 4250 4050
+F 0 "J3" H 3807 4096 50  0000 R CNN
+F 1 "Conn_ARM_JTAG_SWD_10" H 3800 3800 50  0000 R CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical" H 4250 4050 50  0001 C CNN
+F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf" V 3900 2800 50  0001 C CNN
+	1    4250 4050
 	1    0    0    -1  
 $EndComp
-Text GLabel 4650 3150 2    50   Input ~ 0
+Text GLabel 4750 3950 2    50   Input ~ 0
 JTAG_TCK
-Text GLabel 4650 3250 2    50   Input ~ 0
+Text GLabel 4750 4050 2    50   Input ~ 0
 JTAG_TMS
-Text GLabel 4650 3350 2    50   Input ~ 0
+Text GLabel 4750 4150 2    50   Input ~ 0
 JTAG_TDO
-Text GLabel 4650 3450 2    50   Input ~ 0
+Text GLabel 4750 4250 2    50   Input ~ 0
 JTAG_TDI
 $Comp
 L power:GND #PWR0101
 U 1 1 61758443
-P 4150 3950
-F 0 "#PWR0101" H 4150 3700 50  0001 C CNN
-F 1 "GND" H 4155 3777 50  0000 C CNN
-F 2 "" H 4150 3950 50  0001 C CNN
-F 3 "" H 4150 3950 50  0001 C CNN
-	1    4150 3950
+P 4250 4750
+F 0 "#PWR0101" H 4250 4500 50  0001 C CNN
+F 1 "GND" H 4255 4577 50  0000 C CNN
+F 2 "" H 4250 4750 50  0001 C CNN
+F 3 "" H 4250 4750 50  0001 C CNN
+	1    4250 4750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4050 3850 4050 3900
+	4150 4650 4150 4700
 Wire Wire Line
-	4050 3900 4150 3900
+	4150 4700 4250 4700
 Wire Wire Line
-	4150 3900 4150 3950
+	4250 4700 4250 4750
 Wire Wire Line
-	4150 3850 4150 3900
-Connection ~ 4150 3900
+	4250 4650 4250 4700
+Connection ~ 4250 4700
 $Comp
 L power:+3V3 #PWR0102
 U 1 1 6176DA99
-P 4150 2650
-F 0 "#PWR0102" H 4150 2500 50  0001 C CNN
-F 1 "+3V3" H 4165 2823 50  0000 C CNN
-F 2 "" H 4150 2650 50  0001 C CNN
-F 3 "" H 4150 2650 50  0001 C CNN
-	1    4150 2650
+P 4250 3450
+F 0 "#PWR0102" H 4250 3300 50  0001 C CNN
+F 1 "+3V3" H 4265 3623 50  0000 C CNN
+F 2 "" H 4250 3450 50  0001 C CNN
+F 3 "" H 4250 3450 50  0001 C CNN
+	1    4250 3450
 	1    0    0    -1  
 $EndComp
 Text GLabel 7450 2400 2    50   Input ~ 0
@@ -1513,6 +1507,118 @@ Text GLabel 7450 2600 2    50   Input ~ 0
 JTAG_TMS
 Text GLabel 7450 2700 2    50   Input ~ 0
 JTAG_TDO
-Text GLabel 4650 2950 2    50   Input ~ 0
+Text GLabel 4750 3750 2    50   Input ~ 0
 EN
+$Comp
+L LY68L6400SLIT:LY68L6400SLIT U4
+U 1 1 6176F3CE
+P 4200 2450
+F 0 "U4" H 4250 2900 50  0000 C CNN
+F 1 "LY68L6400SLIT" H 4450 2800 50  0000 C CNN
+F 2 "Package_SO:SOP-8_3.76x4.96mm_P1.27mm" H 5050 3000 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/lcsc/1809140531_Lyontek-Inc--LY68L6400SLIT_C261881.pdf" H 3900 2300 50  0001 C CNN
+	1    4200 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0103
+U 1 1 6178529D
+P 4100 1750
+F 0 "#PWR0103" H 4100 1600 50  0001 C CNN
+F 1 "+3V3" H 4115 1923 50  0000 C CNN
+F 2 "" H 4100 1750 50  0001 C CNN
+F 3 "" H 4100 1750 50  0001 C CNN
+	1    4100 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 6178F2A3
+P 4150 2850
+F 0 "#PWR0104" H 4150 2600 50  0001 C CNN
+F 1 "GND" H 4155 2677 50  0000 C CNN
+F 2 "" H 4150 2850 50  0001 C CNN
+F 3 "" H 4150 2850 50  0001 C CNN
+	1    4150 2850
+	1    0    0    -1  
+$EndComp
+Text GLabel 3650 2550 0    50   Input ~ 0
+SPICLK
+Text GLabel 4750 2350 2    50   Input ~ 0
+SPID
+Text GLabel 4750 2450 2    50   Input ~ 0
+SPIQ
+Text GLabel 4750 2550 2    50   Input ~ 0
+SPIWP
+Text GLabel 4750 2650 2    50   Input ~ 0
+SPIHD
+Text GLabel 3450 2450 0    50   Input ~ 0
+SPICS
+$Comp
+L Device:R R19
+U 1 1 617732C4
+P 3550 2150
+F 0 "R19" H 3200 2200 50  0000 L CNN
+F 1 "100KΩ" H 3200 2100 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3480 2150 50  0001 C CNN
+F 3 "~" H 3550 2150 50  0001 C CNN
+	1    3550 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 2450 3550 2450
+Wire Wire Line
+	3550 2300 3550 2450
+Connection ~ 3550 2450
+Wire Wire Line
+	3550 2450 3650 2450
+Text GLabel 6250 3200 0    50   Input ~ 0
+SPIHD
+Text GLabel 6250 3000 0    50   Input ~ 0
+SPIQ
+Text GLabel 6250 3300 0    50   Input ~ 0
+SPIWP
+Text GLabel 6250 3100 0    50   Input ~ 0
+SPID
+Text GLabel 6250 3400 0    50   Input ~ 0
+SPICLK
+Text GLabel 7450 2800 2    50   Input ~ 0
+SPICS
+Wire Wire Line
+	4100 1750 4100 1900
+$Comp
+L Device:C_Small C10
+U 1 1 61774A6F
+P 4650 1900
+F 0 "C10" V 4421 1900 50  0000 C CNN
+F 1 "100nF" V 4512 1900 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4650 1900 50  0001 C CNN
+F 3 "~" H 4650 1900 50  0001 C CNN
+	1    4650 1900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4550 1900 4100 1900
+Connection ~ 4100 1900
+Wire Wire Line
+	4100 1900 3550 1900
+Wire Wire Line
+	3550 1900 3550 2000
+Wire Wire Line
+	4100 1900 4100 2100
+$Comp
+L power:GND #PWR0105
+U 1 1 6178D625
+P 4900 2000
+F 0 "#PWR0105" H 4900 1750 50  0001 C CNN
+F 1 "GND" H 4905 1827 50  0000 C CNN
+F 2 "" H 4900 2000 50  0001 C CNN
+F 3 "" H 4900 2000 50  0001 C CNN
+	1    4900 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 1900 4900 1900
+Wire Wire Line
+	4900 1900 4900 2000
 $EndSCHEMATC
