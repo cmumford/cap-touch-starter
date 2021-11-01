@@ -1,4 +1,5 @@
 #define LOG_LOCAL_LEVEL ESP_LOG_VERBOSE
+#include <driver/include/driver/gpio.h>
 #include <esp_log.h>
 #include <esp_system.h>
 #include <freertos/include/freertos/FreeRTOS.h>
@@ -226,11 +227,19 @@ void guiTask(void* pvParameter) {
   vTaskDelete(nullptr);
 }
 
+void ResetTouchPanel() {
+  ESP_ERROR_CHECK(gpio_set_level(GPIO_NUM_4, 0));
+  vTaskDelay(50 / portTICK_RATE_MS);
+  ESP_ERROR_CHECK(gpio_set_level(GPIO_NUM_4, 1));
+}
+
 }  // namespace
 
 extern "C" void app_main() {
   ESP_LOGI(TAG, "CapTouchStarter app!");
   LogHardwareInfo();
+
+  ResetTouchPanel();
 
   xTaskCreatePinnedToCore(guiTask, "gui", 4096 * 2, nullptr, 0, nullptr, 1);
 }
