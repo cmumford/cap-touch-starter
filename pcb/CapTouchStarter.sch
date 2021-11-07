@@ -413,8 +413,6 @@ F 3 "http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/do
 $EndComp
 Wire Wire Line
 	1750 950  1850 950 
-Wire Wire Line
-	2350 950  2350 800 
 $Comp
 L Regulator_Linear:AMS1117-3.3 U3
 U 1 1 61513BD1
@@ -495,12 +493,12 @@ Wire Wire Line
 $Comp
 L power:VBUS #PWR08
 U 1 1 61513C09
-P 2350 800
-F 0 "#PWR08" H 2350 650 50  0001 C CNN
-F 1 "VBUS" H 2365 973 50  0000 C CNN
-F 2 "" H 2350 800 50  0001 C CNN
-F 3 "" H 2350 800 50  0001 C CNN
-	1    2350 800 
+P 3400 750
+F 0 "#PWR08" H 3400 600 50  0001 C CNN
+F 1 "VBUS" H 3415 923 50  0000 C CNN
+F 2 "" H 3400 750 50  0001 C CNN
+F 3 "" H 3400 750 50  0001 C CNN
+	1    3400 750 
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -925,8 +923,6 @@ NoConn ~ 7450 3900
 NoConn ~ 7450 4000
 NoConn ~ 7450 4100
 Wire Wire Line
-	2350 950  2150 950 
-Wire Wire Line
 	7900 5350 7900 5550
 Connection ~ 7900 5350
 Wire Wire Line
@@ -1004,15 +1000,14 @@ $EndComp
 $Comp
 L Connector:TestPoint TP1
 U 1 1 61384E5A
-P 2350 950
-F 0 "TP1" V 2304 1138 50  0000 L CNN
-F 1 "5V" V 2395 1138 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D2.5mm" H 2550 950 50  0001 C CNN
-F 3 "~" H 2550 950 50  0001 C CNN
-	1    2350 950 
+P 3500 850
+F 0 "TP1" V 3454 1038 50  0000 L CNN
+F 1 "5V" V 3545 1038 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.5mm" H 3700 850 50  0001 C CNN
+F 3 "~" H 3700 850 50  0001 C CNN
+	1    3500 850 
 	0    1    1    0   
 $EndComp
-Connection ~ 2350 950 
 $Comp
 L Connector:TestPoint TP3
 U 1 1 613858D9
@@ -1621,4 +1616,25 @@ Wire Wire Line
 	4750 1900 4900 1900
 Wire Wire Line
 	4900 1900 4900 2000
+$Comp
+L Switch:SW_SPDT SW3
+U 1 1 6189A8B9
+P 3050 950
+F 0 "SW3" H 3050 1235 50  0000 C CNN
+F 1 "SW_SPDT" H 3050 1144 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_Slide_1P2T_CK_OS102011MS2Q" H 3050 950 50  0001 C CNN
+F 3 "~" H 3050 950 50  0001 C CNN
+	1    3050 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 950  2850 950 
+NoConn ~ 3250 1050
+Wire Wire Line
+	3250 850  3400 850 
+Wire Wire Line
+	3400 750  3400 850 
+Connection ~ 3400 850 
+Wire Wire Line
+	3400 850  3500 850 
 $EndSCHEMATC
