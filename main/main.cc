@@ -229,7 +229,7 @@ void guiTask(void* pvParameter) {
 
 void ResetTouchPanel() {
   ESP_ERROR_CHECK(gpio_set_level(GPIO_NUM_4, 0));
-  vTaskDelay(50 / portTICK_RATE_MS);
+  vTaskDelay(pdMS_TO_TICKS(50));
   ESP_ERROR_CHECK(gpio_set_level(GPIO_NUM_4, 1));
 }
 
