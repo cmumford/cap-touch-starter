@@ -1637,4 +1637,48 @@ Wire Wire Line
 Connection ~ 3400 850 
 Wire Wire Line
 	3400 850  3500 850 
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 618BF368
+P 750 7400
+F 0 "H2" H 850 7400 50  0000 L CNN
+F 1 "BL" H 700 7250 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 750 7400 50  0001 C CNN
+F 3 "~" H 750 7400 50  0001 C CNN
+	1    750  7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 618BFFBD
+P 750 7200
+F 0 "H1" H 850 7200 50  0000 L CNN
+F 1 "TL" H 700 7350 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 750 7200 50  0001 C CNN
+F 3 "~" H 750 7200 50  0001 C CNN
+	1    750  7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 618C0B3F
+P 1200 7200
+F 0 "H3" H 1300 7200 50  0000 L CNN
+F 1 "TR" H 1150 7350 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 1200 7200 50  0001 C CNN
+F 3 "~" H 1200 7200 50  0001 C CNN
+	1    1200 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 618C17CB
+P 1200 7400
+F 0 "H4" H 1300 7400 50  0000 L CNN
+F 1 "BR" H 1150 7250 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 1200 7400 50  0001 C CNN
+F 3 "~" H 1200 7400 50  0001 C CNN
+	1    1200 7400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
