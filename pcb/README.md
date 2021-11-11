@@ -32,6 +32,7 @@
 | 2        | Tactile pushbutton               |                 |                    |
 | 1        | MCU                              | ESP32-WROOM-32E |                    |
 | 1        | Voltage Regulator                | AMS1117-3.3     | SOT-223            |
+| 1        | Voltage Detector                 | BD48K33G-TLCT-ND| SOT-23-3           |
 | 1        | USB-to-UART bridge controller    | CP2102N-A01     | QFN-28             |
 | 1        | Slider 1P2T switch               | SK-12D07        |                    |
 
@@ -40,6 +41,5 @@
 * Figure out touch panel communication issue.
 * Debug with JTAG to make sure it's working.
 * JTAG connector cable clearance around display.
-* Power for display - separate regulator or something.
 * Get TX/RX LED's are working.
 * Different ESD protection for USB.

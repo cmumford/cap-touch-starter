@@ -783,13 +783,13 @@ Wire Wire Line
 $Comp
 L Device:R R11
 U 1 1 618987D7
-P 5850 1550
-F 0 "R11" H 5920 1596 50  0000 L CNN
-F 1 "10KΩ" H 5920 1505 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 5780 1550 50  0001 C CNN
-F 3 "~" H 5850 1550 50  0001 C CNN
-	1    5850 1550
-	1    0    0    -1  
+P 5700 850
+F 0 "R11" V 5600 750 50  0000 L CNN
+F 1 "10KΩ" V 5800 750 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5630 850 50  0001 C CNN
+F 3 "~" H 5700 850 50  0001 C CNN
+	1    5700 850 
+	0    1    1    0   
 $EndComp
 $Comp
 L Device:C_Small C5
@@ -806,15 +806,11 @@ Wire Wire Line
 	6250 1800 5850 1800
 Wire Wire Line
 	5850 1800 5850 1900
-Wire Wire Line
-	5850 1700 5850 1800
 Connection ~ 5850 1800
 Wire Wire Line
 	5700 1800 5850 1800
 Wire Wire Line
 	6250 850  5850 850 
-Wire Wire Line
-	5850 850  5850 1400
 Connection ~ 6250 850 
 $Comp
 L power:GND #PWR018
@@ -1679,6 +1675,36 @@ F 1 "BR" H 1150 7250 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 1200 7400 50  0001 C CNN
 F 3 "~" H 1200 7400 50  0001 C CNN
 	1    1200 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Power_Management:BD48KxxG U5
+U 1 1 618D4AFC
+P 5300 1250
+F 0 "U5" H 5121 1296 50  0000 R CNN
+F 1 "BD48K33G-TLCT-ND" H 5121 1205 50  0000 R CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5300 750 50  0001 C CNN
+F 3 "https://www.rohm.de/datasheet/BD4830FVE/bd48xxg-e" H 5300 650 50  0001 C CNN
+	1    5300 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 850  5300 850 
+Wire Wire Line
+	5300 850  5300 950 
+Wire Wire Line
+	5700 1250 5850 1250
+Wire Wire Line
+	5850 1250 5850 1800
+$Comp
+L power:GND #PWR0106
+U 1 1 618FFC69
+P 5300 1550
+F 0 "#PWR0106" H 5300 1300 50  0001 C CNN
+F 1 "GND" H 5305 1377 50  0000 C CNN
+F 2 "" H 5300 1550 50  0001 C CNN
+F 3 "" H 5300 1550 50  0001 C CNN
+	1    5300 1550
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
