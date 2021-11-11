@@ -40,6 +40,5 @@
 
 * Figure out touch panel communication issue.
 * Debug with JTAG to make sure it's working.
-* JTAG connector cable clearance around display.
 * Get TX/RX LED's are working.
 * Different ESD protection for USB.
