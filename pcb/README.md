@@ -39,6 +39,6 @@
 # TODO for board rev. 3
 
 * Figure out touch panel communication issue.
-* Debug with JTAG to make sure it's working.
 * Get TX/RX LED's are working.
+* Debug with JTAG to make sure it's working.
 * Different ESD protection for USB.
