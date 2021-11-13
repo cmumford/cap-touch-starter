@@ -24,7 +24,6 @@
 | 4        | Resistor                         | 68Ω             | 0603 (1608 Metric) |
 | 2        | Resistor                         | 2KΩ             | 0603 (1608 Metric) |
 | 1        | Resistor                         | 22K1Ω           | 0603 (1608 Metric) |
-| 2        | Resistor                         | 0Ω              | 0603 (1608 Metric) |
 | 1        | Resistor                         | 47K5Ω           | 0603 (1608 Metric) |
 | 4        | Resistor                         | 10KΩ            | 0603 (1608 Metric) |
 | 2        | Resistor                         | 5K1Ω            | 0603 (1608 Metric) |
