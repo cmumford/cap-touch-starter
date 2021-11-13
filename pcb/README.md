@@ -39,5 +39,5 @@
 
 * Figure out touch panel communication issue.
 * Get TX/RX LED's are working.
-* Debug with JTAG to make sure it's working.
+* Add utility LED.
 * Different ESD protection for USB.

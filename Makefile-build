@@ -32,6 +32,14 @@ target:
 build:
 	${IDF} build
 
+.PHONY: openocd
+openocd:
+	idf.py openocd
+
+.PHONY: debug
+debug:
+	idf.py gdbtui
+
 build/bootloader/bootloader.bin:
 	${IDF} build
 
