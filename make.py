@@ -8,24 +8,30 @@ import serial.tools.list_ports
 import subprocess
 import sys
 from pprint import pprint
+from enum import Enum
 
+class ConsoleTarget(Enum):
+    UART = 1
+    CDC = 2
+    CUSTOM = 3
+    NONE = 4
 
 class SdkConfigManager(object):
     @staticmethod
-    def GetConsoleTarget(sdkconfig):
+    def GetConsoleTarget(sdkconfig) -> int:
         if 'CONFIG_ESP_CONSOLE_UART' in sdkconfig and \
                 sdkconfig['CONFIG_ESP_CONSOLE_UART'] == 'y':
-            return 'UART'
+            return ConsoleTarget.UART
         if 'CONFIG_ESP_CONSOLE_CDC' in sdkconfig and \
                 sdkconfig['CONFIG_ESP_CONSOLE_CDC'] == 'y':
-            return 'CDC'
+            return ConsoleTarget.CDC
         if 'CONFIG_ESP_CONSOLE_CUSTOM' in sdkconfig and \
                 sdkconfig['CONFIG_ESP_CONSOLE_CUSTOM'] == 'y':
-            return 'CUSTOM'
-        return 'NONE'
+            return ConsoleTarget.CUSTOM
+        return ConsoleTarget.NONE
 
     @staticmethod
-    def Load():
+    def Load() -> dict:
         values = dict()
         try:
             with open('sdkconfig', 'r') as f:
@@ -46,88 +52,78 @@ class SdkConfigManager(object):
         return values
 
 
-class PortManager(object):
+class PortEnumerator(object):
+    def __init__(self):
+        pass
+
+    def GetSerialPorts(self) -> list:
+        pass
+
+    def GetModemPorts(self) -> list:
+        pass
+
+class WindowsPortEnumerator(PortEnumerator):
+    def GetSerialPorts(self) -> list:
+        ports = []
+        for port in serial.tools.list_ports.comports():
+            ports.append(port.device)
+        return ports
+
+    def GetModemPorts(self) -> list:
+        return self.GetSerialPorts()
+
+class MacPortEnumerator(PortEnumerator):
     ignored = ('/dev/cu.Bluetooth-Incoming-Port')
 
-    def __init__(self, sdkconfig):
-        self.__sdkconfig = sdkconfig
-        self.__console_target = SdkConfigManager.GetConsoleTarget(sdkconfig)
-
     @staticmethod
-    def __GetSerialWildcard():
+    def __GetSerialWildcard() -> str:
         return '/dev/cu.usbserial-*'
 
     @staticmethod
-    def __GetModemWildcard():
+    def __GetModemWildcard() -> str:
         return '/dev/cu.usbmodem*'
 
     @staticmethod
-    def __GetMatchingPorts(wildcard):
+    def __GetMatchingPorts(wildcard) -> list:
         ports = []
         for file in glob.glob(wildcard, recursive=False):
-            if file in PortManager.ignored:
+            if file in MacPortEnumerator.ignored:
                 continue
             ports.append(file)
         return ports
 
-    @staticmethod
-    def __GetDevicePorts():
-        """Return any port with "USB Serial Device in the description.
+    def GetSerialPorts(self) -> list:
+        return MacPortEnumerator.__GetMatchingPorts(
+                MacPortEnumerator.__GetSerialWildcard())
 
-        The ESP32 port is one of these.
-        """
-        ports = []
-        for port in serial.tools.list_ports.comports():
-            if (port.hwid and 'SER=0' in port.hwid):
-                ports.append(port.device)
-            # pprint(vars(port))
-        return ports
+    def GetModemPorts(self) -> list:
+        return MacPortEnumerator.__GetMatchingPorts(
+                MacPortEnumerator.__GetModemWildcard())
 
-    @staticmethod
-    def __GetCOMPorts():
-        """Return any port with "USB Serial Port" in the description.
+class PortManager(object):
+    def __init__(self, sdkconfig, port_enumerator):
+        self.__sdkconfig = sdkconfig
+        self.__console_target = SdkConfigManager.GetConsoleTarget(sdkconfig)
+        self.__port_enumerator = port_enumerator
 
-        The serial debugger shows up as one of these.
-        """
-        ports = []
-        for port in serial.tools.list_ports.comports():
-            if (port.hwid and 'SER=0' not in port.hwid):
-                ports.append(port.device)
-            # pprint(vars(port))
-        return ports
-
-    @staticmethod
-    def GetSerialPorts():
-        if platform.system() == 'Windows':
-            return PortManager.__GetCOMPorts()
-        return PortManager.__GetMatchingPorts(
-            PortManager.__GetSerialWildcard())
-
-    @staticmethod
-    def GetModemPorts():
-        if platform.system() == 'Windows':
-            return PortManager.__GetDevicePorts()
-        return PortManager.__GetMatchingPorts(PortManager.__GetModemWildcard())
-
-    @staticmethod
-    def GetFlashPort():
-        ports = PortManager.GetModemPorts()
+    def GetFlashPort(self) -> str:
+        ports = self.__port_enumerator.GetModemPorts()
         if ports:
             return ports[0]
-        ports = PortManager.GetSerialPorts()
+        ports = self.__port_enumerator.GetSerialPorts()
         return ports[0] if ports else None
 
-    def GetMonitorPort(self):
-        if self.__console_target == 'UART':
-            ports = PortManager.GetSerialPorts()
+    def GetMonitorPort(self) -> str:
+        if self.__console_target == ConsoleTarget.UART:
+            ports = self.__port_enumerator.GetSerialPorts()
         else:
-            ports = PortManager.GetModemPorts()
+            ports = self.__port_enumerator.GetModemPorts()
         return ports[0] if ports else None
 
     def PrintPorts(self, fd=sys.stdout):
-        print('Serial ports: %s' % PortManager.GetSerialPorts(), file=fd)
-        print('Modem ports: %s' % PortManager.GetSerialPorts(), file=fd)
-        print('Flash port: %s' % PortManager.GetFlashPort(), file=fd)
+        print('Serial ports: %s' % self.__port_enumerator.GetSerialPorts(), file=fd)
+        print('Modem ports: %s' % self.__port_enumerator.GetModemPorts(), file=fd)
+        print('Flash port: %s' % self.GetFlashPort(), file=fd)
         print('Monitor port: %s' % self.GetMonitorPort(), file=fd)
 
 
@@ -140,7 +136,7 @@ def TargetNeedsFlashPort(target):
 
 
 def MakeTargets(targets, port_manager):
-    flash_port = PortManager.GetFlashPort()
+    flash_port = port_manager.GetFlashPort()
     monitor_port = port_manager.GetMonitorPort()
     for target in targets:
         if TargetNeedsMonitorPort(target) and not monitor_port:
@@ -171,7 +167,12 @@ if 'IDF_PATH' not in os.environ:
     print(file=sys.stderr)
     sys.exit(1)
 
-port_manager = PortManager(SdkConfigManager.Load())
+if platform.system() == 'Windows':
+    port_enumerator = WindowsPortEnumerator()
+else:
+    port_enumerator = MacPortEnumerator()
+
+port_manager = PortManager(SdkConfigManager.Load(), port_enumerator)
 
 targets = sys.argv[1:]
 MakeTargets(targets, port_manager)
