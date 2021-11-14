@@ -4,6 +4,8 @@ This is a simple hardware/software starter project that contains an
 MCU (ESP32), and a capacitive touch screen. Nothing fancy, just
 something to fork when starting a new project that needs these capabilities.
 
+![Board render](img/Render.png)
+
 # Main Components
 
 * ESP32-WROOM-32E ([Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf))
