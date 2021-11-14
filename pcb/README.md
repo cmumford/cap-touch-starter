@@ -38,5 +38,4 @@
 # TODO for board rev. 3
 
 * Figure out touch panel communication issue.
-* Get TX/RX LED's working.
 * Different ESD protection for USB.
