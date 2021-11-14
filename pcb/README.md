@@ -34,7 +34,3 @@
 | 1        | USB-to-UART bridge controller    | CP2102N-A01     | QFN-28             |
 | 2        | Tactile pushbutton               |                 |                    |
 | 1        | Slider 1P2T switch               | SK-12D07        |                    |
-
-# TODO for board rev. 3
-
-* Different ESD protection for USB.
