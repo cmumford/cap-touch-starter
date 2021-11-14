@@ -37,5 +37,4 @@
 
 # TODO for board rev. 3
 
-* Figure out touch panel communication issue.
 * Different ESD protection for USB.
