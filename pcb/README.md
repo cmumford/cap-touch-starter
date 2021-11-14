@@ -16,13 +16,13 @@
 | 1        | Capacitor                        | 4.7μF/6.3V      | 0603 (1608 Metric) |
 | 1        | Diode (Schottsky)                | BAT760-7        | SOD-323            |
 | 1        | Voltage suppressor               | SP0503BAHT      | SOT-143            |
-| 1        | LED                              | LED             | 0603 (1608 Metric) |
+| 4        | LED                              | LED             | 0603 (1608 Metric) |
 | 1        | USB Type-C Receptacle            | 12401548E412A   |                    |
 | 1        | 2.8" LCD w/Capacitive Touch      | [2770](https://www.adafruit.com/product/2770) |  |
 | 1        | Flat pack ribbon cable connector | 62684-502100ALF | 50 pin 0.5 mm pitch |
 | 2        | NPN Transistor                   | SS8050-G        | SOT-23             |
 | 4        | Resistor                         | 68Ω             | 0603 (1608 Metric) |
-| 2        | Resistor                         | 2KΩ             | 0603 (1608 Metric) |
+| 3        | Resistor                         | 2KΩ             | 0603 (1608 Metric) |
 | 1        | Resistor                         | 22K1Ω           | 0603 (1608 Metric) |
 | 1        | Resistor                         | 47K5Ω           | 0603 (1608 Metric) |
 | 4        | Resistor                         | 10KΩ            | 0603 (1608 Metric) |
@@ -39,5 +39,4 @@
 
 * Figure out touch panel communication issue.
 * Get TX/RX LED's are working.
-* Add utility LED.
 * Different ESD protection for USB.
