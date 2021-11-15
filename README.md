@@ -1,6 +1,6 @@
 # Introduction
 
-This is a simple hardware/software starter project that contains an
+This is a simple hardware/software starter project containing an
 MCU (ESP32), and a capacitive touch screen. Nothing fancy, just
 something to fork when starting a new project that needs these capabilities.
 
