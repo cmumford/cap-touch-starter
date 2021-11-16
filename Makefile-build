@@ -12,13 +12,21 @@ GIT_SUBMODULES=components/lvgl \
 	components/lvgl_esp32_drivers \
 	components/lv_demos/lv_demos
 
+CLEAN_ITEMS=build \
+	sdkconfig \
+	sdkconfig.old \
+	pcb/CapTouchStarter.sch-bak \
+	pcb/CapTouchStarter.kicad_pcb-bak \
+	pcb/CapTouchStarter-cache.lib \
+	pcb/fp-info-cache
+
 .PHONY: format
 format:
 	clang-format -i main/*.cc main/*.c main/*.h
 
 .PHONY: clean
 clean:
-	python scripts/delete-items.py build sdkconfig sdkconfig.old
+	python scripts/delete-items.py ${CLEAN_ITEMS}
 
 .PHONY: config
 config:
