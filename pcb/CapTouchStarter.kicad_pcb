@@ -11,7 +11,11 @@
 
   (page A4)
   (title_block
+    (title "Test ESP32-WROOM-32E display board")
     (rev 4)
+    (company "Chris Mumford")
+    (comment 3 "USB-C, ESP32, Capacitive touch")
+    (comment 4 "ESP32 w/display")
   )
 
   (layers
