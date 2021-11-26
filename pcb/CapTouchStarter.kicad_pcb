@@ -10,6 +10,10 @@
   )
 
   (page A4)
+  (title_block
+    (rev 4)
+  )
+
   (layers
     (0 Front signal)
     (1 In1.Cu signal)
@@ -2948,7 +2952,7 @@
   (gr_text "Author: cmumford" (at 136.392737 139.10056) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.25)))
   )
-  (gr_text "rev. 3" (at 133.02488 141.1986) (layer F.SilkS)
+  (gr_text "rev. 4" (at 133.02488 141.1986) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
   (gr_text "Display Starter" (at 138.132023 136.51992) (layer F.SilkS)

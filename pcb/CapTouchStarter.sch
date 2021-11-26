@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "Test ESP32-WROOM-32E display board"
 Date "2021-09-26"
-Rev "3"
+Rev "4"
 Comp "Chris Mumford"
 Comment1 "Fork this project and start making changes"
 Comment2 ""
