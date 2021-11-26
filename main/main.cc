@@ -241,5 +241,8 @@ extern "C" void app_main() {
 
   ResetTouchPanel();
 
+  // Turn on utility LED.
+  ESP_ERROR_CHECK(gpio_set_level(GPIO_NUM_32, 1));
+
   xTaskCreatePinnedToCore(guiTask, "gui", 4096 * 2, nullptr, 0, nullptr, 1);
 }
