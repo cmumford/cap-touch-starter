@@ -233,16 +233,42 @@ void ResetTouchPanel() {
   ESP_ERROR_CHECK(gpio_set_level(GPIO_NUM_4, 1));
 }
 
+void LEDTaskFunc(void* arg) {
+  uint32_t led_level = 1;
+  ESP_LOGI(TAG, "In LED blinking task.");
+  while (true) {
+    gpio_set_level(GPIO_NUM_32, led_level);
+    vTaskDelay(pdMS_TO_TICKS(1000));
+    led_level = 1 - led_level;
+  }
+}
+
+esp_err_t CreateLEDBlinkTask() {
+  constexpr uint16_t kStackDepthWords = 2048;
+  return xTaskCreate(LEDTaskFunc, TAG, kStackDepthWords, nullptr,
+                     tskIDLE_PRIORITY + 1, nullptr) == pdPASS
+             ? ESP_OK
+             : ESP_FAIL;
+}
+
 }  // namespace
 
 extern "C" void app_main() {
   ESP_LOGI(TAG, "CapTouchStarter app!");
   LogHardwareInfo();
 
+  constexpr gpio_config_t config = {
+      .pin_bit_mask = ((1ULL << GPIO_NUM_4) | (1ULL << GPIO_NUM_32)),
+      .mode = GPIO_MODE_OUTPUT,
+      .pull_up_en = GPIO_PULLUP_DISABLE,
+      .pull_down_en = GPIO_PULLDOWN_DISABLE,
+      .intr_type = GPIO_INTR_DISABLE,
+  };
+  ESP_ERROR_CHECK(gpio_config(&config));
+
   ResetTouchPanel();
 
-  // Turn on utility LED.
-  ESP_ERROR_CHECK(gpio_set_level(GPIO_NUM_32, 1));
+  ESP_ERROR_CHECK(CreateLEDBlinkTask());
 
   xTaskCreatePinnedToCore(guiTask, "gui", 4096 * 2, nullptr, 0, nullptr, 1);
 }
