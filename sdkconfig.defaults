@@ -127,6 +127,35 @@ CONFIG_SPI_SLAVE_ISR_IN_IRAM=y
 #
 # ESP32-specific
 #
+
+#
+# SPI RAM config
+#
+
+#
+# SPIRAM cache workaround debugging
+#
+# end of SPIRAM cache workaround debugging
+
+#
+# PSRAM clock and cs IO for ESP32-DOWD
+#
+# end of PSRAM clock and cs IO for ESP32-DOWD
+
+#
+# PSRAM clock and cs IO for ESP32-D2WD
+#
+# end of PSRAM clock and cs IO for ESP32-D2WD
+
+#
+# PSRAM clock and cs IO for ESP32-PICO
+#
+# end of PSRAM clock and cs IO for ESP32-PICO
+
+# CONFIG_SPIRAM_CUSTOM_SPIWP_SD3_PIN is not set
+# CONFIG_SPIRAM_2T_MODE is not set
+# end of SPI RAM config
+
 # end of ESP32-specific
 
 #
