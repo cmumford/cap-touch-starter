@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 3220-10-0100-00
+D Conn header vert 10pos 1.27mm
+K JTAG
+F http://www.cnctech.us/idcmatching2.pdf
+$ENDCMP
+#
+#End Doc Library
