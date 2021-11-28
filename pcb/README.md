@@ -18,7 +18,7 @@
 | 1        | Voltage suppressor               | SP0503BAHT      | SOT-143            |
 | 4        | LED                              | LED             | 0603 (1608 Metric) |
 | 1        | USB Type-C Receptacle            | [12401548E412A](https://www.digikey.com/en/products/detail/amphenol-icc-commercial-products/12401548E412A/13683580)   |                    |
-| 1        | 2.8" LCD w/Capacitive Touch      | [2770](https://www.adafruit.com/product/2770) |  |
+| 1        | 2.8" LCD w/Capacitive Touch      | [DT280QV10-CT](https://www.adafruit.com/product/2770) |  |
 | 1        | Flat pack ribbon cable connector | 62684-502100ALF | 50 pin 0.5 mm pitch |
 | 2        | NPN Transistor                   | SS8050-G        | SOT-23             |
 | 4        | Resistor                         | 68Ω             | 0603 (1608 Metric) |
