@@ -9,3 +9,6 @@
 	path = components/lv_demos/lv_demos
 	url = https://github.com/lvgl/lv_demos.git
 	branch = release/v8
+[submodule "pcb/libraries/ESP32-WROVER-E"]
+	path = pcb/libraries/ESP32-WROVER-E
+	url = https://github.com/cmumford/ESP32-WROVER-E.git

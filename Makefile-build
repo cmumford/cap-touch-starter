@@ -11,7 +11,8 @@ ESPTOOL=esptool.py
 
 GIT_SUBMODULES=components/lvgl \
 	components/lvgl_esp32_drivers \
-	components/lv_demos/lv_demos
+	components/lv_demos/lv_demos \
+	pbc/libraries/ESP32-WROVER-E
 
 CLEAN_ITEMS=build \
 	sdkconfig \

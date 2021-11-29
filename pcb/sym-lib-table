@@ -5,4 +5,5 @@
   (lib (name 0541325062)(type Legacy)(uri ${KIPRJMOD}/library/0541325062/0541325062.lib)(options "")(descr ""))
   (lib (name SS-52400-003)(type Legacy)(uri ${KIPRJMOD}/library/SS-52400-003/SS-52400-003.lib)(options "")(descr "CONN USB TYPE C RT. ANGLE JACK"))
   (lib (name 3220-10-0100-00)(type Legacy)(uri ${KIPRJMOD}/library/3220-10-0100-00/3220-10-0100-00.lib)(options "")(descr "CONN USB TYPE C RT. ANGLE JACK"))
+  (lib (name EspressIf)(type Legacy)(uri ${KIPRJMOD}/libraries/ESP32-WROVER-E/EspressIf.lib)(options "")(descr ""))
 )
