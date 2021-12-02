@@ -1366,7 +1366,7 @@ U 1 1 61754D79
 P 3950 3000
 F 0 "J2" H 3507 3046 50  0000 R CNN
 F 1 "Conn_ARM_JTAG_SWD_10" H 3500 2750 50  0000 R CNN
-F 2 "3220-10-0100-00:3220-10-0100-00" H 3950 3000 50  0001 C CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical" H 3950 3000 50  0001 C CNN
 F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf" V 3600 1750 50  0001 C CNN
 	1    3950 3000
 	1    0    0    -1  
