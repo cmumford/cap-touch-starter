@@ -1,7 +1,6 @@
 ####################################################################################
-# Project uses: ESP32-WROOM-32E (M113EH6400PH3Q0)
-# Datasheet: https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf
-# 4 MB external SPI flash
+# Project uses: ESP32-WROVER-E
+# Datasheet: https://www.espressif.com/sites/default/files/documentation/esp32-wrover_datasheet_en.pdf
 ####################################################################################
 
 CONFIG_IDF_CMAKE=y

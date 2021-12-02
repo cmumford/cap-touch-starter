@@ -4,7 +4,7 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Test ESP32-WROOM-32E display board"
+Title "Test ESP32-WROVER-E display board"
 Date "2021-09-26"
 Rev "4"
 Comp "Chris Mumford"
