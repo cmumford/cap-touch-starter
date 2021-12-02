@@ -1640,4 +1640,11 @@ Wire Wire Line
 Connection ~ 8150 2000
 Wire Wire Line
 	7500 2000 8150 2000
+NoConn ~ 7500 2300
+NoConn ~ 7500 2700
+NoConn ~ 6200 2200
+NoConn ~ 6200 2300
+NoConn ~ 6200 2400
+NoConn ~ 6200 2500
+NoConn ~ 6200 2900
 $EndSCHEMATC
