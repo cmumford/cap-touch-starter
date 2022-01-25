@@ -1999,7 +1999,6 @@
     )
   )
 
-
   (junction (at 207.01 50.8) (diameter 0) (color 0 0 0 0)
     (uuid 05f2859d-2820-4e84-b395-696011feb13b)
   )
@@ -3123,10 +3122,10 @@
       (effects (font (size 1.27 1.27)) hide)
     )
   )
-  (global_label "EN" (shape input) (at 113.03 68.58 0) (fields_autoplaced)
+  (global_label "EN" (shape input) (at 118.11 68.58 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 0a1a4d88-972a-46ce-b25e-6cb796bd41f7)
-    (property "Intersheet References" "${INTERSHEET_REFS}" (id 0) (at 0 0 0)
+    (property "Intersheet References" "${INTERSHEET_REFS}" (id 0) (at 5.08 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
   )
@@ -5059,6 +5058,25 @@
     (pin "9" (uuid 0782b05a-6e79-4a24-a6b5-e815e88614f4))
   )
 
+  (symbol (lib_id "Device:R_Small") (at 115.57 68.58 90) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid 4f59afea-52a6-42ef-a827-b3f6d4652563)
+    (property "Reference" "R20" (id 0) (at 116.84 63.5 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "39Ω" (id 1) (at 118.11 66.04 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (id 2) (at 115.57 68.58 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (id 3) (at 115.57 68.58 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 08afb58a-4169-4ee6-a497-ed90601c3530))
+    (pin "2" (uuid 40c9c15b-adf4-484d-9f91-52ed98bee0f1))
+  )
+
   (symbol (lib_id "power:PWR_FLAG") (at 138.43 19.05 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid a1970094-5545-4754-8eed-12d3fe451497)
@@ -5394,6 +5412,9 @@
     )
     (path "/00000000-0000-0000-0000-000061347507"
       (reference "R19") (unit 1) (value "68Ω") (footprint "Resistor_SMD:R_0603_1608Metric")
+    )
+    (path "/4f59afea-52a6-42ef-a827-b3f6d4652563"
+      (reference "R20") (unit 1) (value "39Ω") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-00006189a8b9"
       (reference "SW1") (unit 1) (value "SW_SPDT") (footprint "Button_Switch_THT:SW_Slide_1P2T_CK_OS102011MS2Q")
