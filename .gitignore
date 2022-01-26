@@ -9,6 +9,7 @@ sdkconfig
 *-bak
 *-cache.lib
 *.bck
+*.kicad_prl 
 *.net
 *.sch-bak
 *.swp
