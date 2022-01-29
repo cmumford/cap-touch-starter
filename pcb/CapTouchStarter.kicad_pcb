@@ -1922,7 +1922,7 @@
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
-    (model "${KIPRJMOD}/library/12401548E412A/1054500101.stp"
+    (model "${KIPRJMOD}/libraries\cmumford-components\3dshapes/1054500101.stp"
       (offset (xyz 0 2 1.5))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 180))
@@ -2104,7 +2104,7 @@
     )
   )
 
-  (footprint "0541325062:0541325062" (layer "F.Cu")
+  (footprint "cmumford-footprints:62684-50110" (layer "F.Cu")
     (tedit 61F036B7) (tstamp 00000000-0000-0000-0000-0000618867b9)
     (at 185.1152 85.4202 -90)
     (descr "50 Position FFC, FPC Connector Contacts, Bottom 0.020\" (0.50mm) Surface Mount, Right Angle")
@@ -2237,7 +2237,7 @@
       (net 1 "GND") (pinfunction "50") (pintype "passive") (tstamp 9f8381e9-3077-4453-a480-a01ad9c1a940))
     (pad "F1" smd rect locked (at 1.27 -13.97 90) (size 2.27 1.8) (layers "F.Cu" "F.Paste") (tstamp 3e903008-0276-4a73-8edb-5d9dfde6297c))
     (pad "F2" smd rect locked (at 1.27 15.24 90) (size 2.27 1.8) (layers "F.Cu" "F.Paste") (tstamp bd5408e4-362d-4e43-9d39-78fb99eb52c8))
-    (model "${KIPRJMOD}/library/0541325062/footprints.pretty/0541325062.stp"
+    (model "${KIPRJMOD}/libraries/cmumford-components/3dshapes/s62684_501100alf.stp"
       (offset (xyz -1.5 -0.5 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 90 180 90))

@@ -15,7 +15,7 @@
   )
 
   (lib_symbols
-    (symbol "62684-50110:62684-50110" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+    (symbol "cmumford-symbols:62684-50110" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
       (property "Reference" "J" (id 0) (at -7.62 67.31 0)
         (effects (font (size 1.27 1.27)) (justify left bottom))
       )
@@ -3410,7 +3410,7 @@
     )
   )
 
-  (symbol (lib_id "62684-50110:62684-50110") (at 254 86.36 0) (mirror x) (unit 1)
+  (symbol (lib_id "cmumford-symbols:62684-50110") (at 254 86.36 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00006133b4ee)
     (property "Reference" "J3" (id 0) (at 262.382 86.2584 0)
@@ -3419,10 +3419,10 @@
     (property "Value" "62684-50110" (id 1) (at 262.382 83.947 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "0541325062:0541325062" (id 2) (at 264.16 90.17 0)
+    (property "Footprint" "cmumford-footprints:62684-50110" (id 2) (at 264.16 90.17 0)
       (effects (font (size 1.27 1.27)) (justify left bottom) hide)
     )
-    (property "Datasheet" "" (id 3) (at 254 86.36 0)
+    (property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/62684.pdf" (id 3) (at 254 86.36 0)
       (effects (font (size 1.27 1.27)) (justify left bottom) hide)
     )
     (property "EU_RoHS_Compliance" "Compliant" (id 4) (at 266.7 86.36 0)
@@ -5348,7 +5348,7 @@
       (reference "J2") (unit 1) (value "Conn_ARM_JTAG_SWD_10") (footprint "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical")
     )
     (path "/00000000-0000-0000-0000-00006133b4ee"
-      (reference "J3") (unit 1) (value "62684-50110") (footprint "0541325062:0541325062")
+      (reference "J3") (unit 1) (value "62684-50110") (footprint "cmumford-symbols:62684-50110")
     )
     (path "/00000000-0000-0000-0000-0000617c491d"
       (reference "Q1") (unit 1) (value "SS8050-G") (footprint "Package_TO_SOT_SMD:SOT-23")

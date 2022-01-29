@@ -12,3 +12,6 @@
 [submodule "pcb/libraries/ESP32-WROVER-E"]
 	path = pcb/libraries/ESP32-WROVER-E
 	url = https://github.com/cmumford/ESP32-WROVER-E.git
+[submodule "pcb/libraries/cmumford-components"]
+	path = pcb/libraries/cmumford-components
+	url = https://github.com/cmumford/cmumford-components.git
