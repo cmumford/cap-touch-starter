@@ -3113,7 +3113,7 @@
   (gr_text "JLCJLCJLCJLC" (at 182.88 85.5472) (layer "F.SilkS") (tstamp 3198b8ca-7d11-4e0c-89a4-c173f9fcf724)
     (effects (font (size 1 1) (thickness 0.15)))
   )
-  (gr_text "rev. 4" (at 187.63488 104.3686) (layer "F.SilkS") (tstamp 3c3e06bd-c8bb-4ec8-84e0-f7f9437909b3)
+  (gr_text "rev. ${REVISION}" (at 187.63488 104.3686) (layer "F.SilkS") (tstamp 3c3e06bd-c8bb-4ec8-84e0-f7f9437909b3)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
   (gr_text "ON" (at 168.8465 142.4178) (layer "F.SilkS") (tstamp 59e09498-d26e-4ba7-b47d-fece2ea7c274)
