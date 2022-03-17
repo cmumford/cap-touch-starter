@@ -9,6 +9,8 @@ BAUD=921600
 IDF=idf.py
 ESPTOOL=esptool.py
 
+default: build
+
 GIT_SUBMODULES=components/lvgl \
 	components/lvgl_esp32_drivers \
 	components/lv_demos/lv_demos \
